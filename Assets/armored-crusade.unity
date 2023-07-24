@@ -784,7 +784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missile: {fileID: 1360670361088370174, guid: 35e585c77dfb94d418d36fe79414d94f, type: 3}
   muzzle: {fileID: 1939499918}
-  force: 125000
+  speed: 1750
 --- !u!1 &2070219567
 GameObject:
   m_ObjectHideFlags: 0
