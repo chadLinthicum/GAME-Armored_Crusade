@@ -994,6 +994,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 230475657281315137, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1388689476973812210, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
@@ -1045,6 +1049,10 @@ PrefabInstance:
     - target: {fileID: 6218346542468264524, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: speed
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7299518660075547716, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8951480927383464537, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: m_LocalPosition.x
