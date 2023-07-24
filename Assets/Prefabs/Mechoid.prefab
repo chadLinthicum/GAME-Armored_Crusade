@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 8958186181315400972}
   - component: {fileID: 1655356528346180435}
   m_Layer: 0
-  m_Name: Drone-Passive
+  m_Name: Mechoid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
