@@ -6,8 +6,8 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] mechoidPrefab;
 
-    float spawnY = 106.3f;
-    float spawnZ = 872f;
+    public float spawnY = 100f;
+    public float spawnZ = 872f;
 
     public Vector3[] positions;
 
