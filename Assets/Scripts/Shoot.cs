@@ -13,7 +13,7 @@ public class Shoot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = speed * 1000;
+        speed = speed * 10;
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class Shoot : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             GameObject bullet = Instantiate(missile, muzzle.position, muzzle.rotation);
-            bullet.GetComponent<Rigidbody>().velocity = muzzle.forward * speed * Time.deltaTime;
+            bullet.GetComponent<Rigidbody>().velocity = muzzle.forward * speed;
         }
     }
 }
