@@ -10,9 +10,7 @@ public class Enemy_Drone_1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(transform.localPosition.z);
-
-        if (transform.localPosition.z > -815.0f)
+        if (transform.position.z > 90.0f)
         {
             Move();
         }
