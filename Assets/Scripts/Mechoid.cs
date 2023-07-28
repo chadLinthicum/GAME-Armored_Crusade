@@ -5,10 +5,10 @@ using UnityEngine;
 public class Mechoid : MonoBehaviour
 {
     public float speed = 150.0f;
-    public float zThreshold = 100.0f;
-    public float backBound = -1200.0f;
-    private Animator childAnimator;
+    public float zStop = 100.0f;
+    public float boundary = -1200.0f;
     private bool fired = false;
+    private Animator childAnimator;
 
     void Start()
     {
@@ -18,11 +18,11 @@ public class Mechoid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.z > zThreshold)
+        if (transform.position.z > zStop)
         {
             Move();
         }
-        if (transform.position.z < zThreshold && fired == false)
+        if (transform.position.z < zStop && fired == false)
         {
             childAnimator.SetBool("isMoving", false);
 
@@ -51,7 +51,7 @@ public class Mechoid : MonoBehaviour
     }
     void CheckBounds()
     {
-        if (transform.localPosition.z < backBound)
+        if (transform.localPosition.z < boundary)
         {
             Destroy(gameObject);
         }
