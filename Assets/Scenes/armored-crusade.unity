@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mechoidPrefab:
-  - {fileID: 4610572569026629290, guid: 169048d1828d24d4aa50dfc90ee86d48, type: 3}
+  - {fileID: 1123854114948101564, guid: f53cf6a26e8b5d74bba3733c4c2bf096, type: 3}
   spawnY: 110
   spawnZ: 1110
   positions:
