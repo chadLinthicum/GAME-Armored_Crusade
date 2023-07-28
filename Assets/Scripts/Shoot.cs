@@ -23,6 +23,7 @@ public class Shoot : MonoBehaviour
         {
             GameObject bullet = Instantiate(missile, muzzle.position, muzzle.rotation);
             bullet.GetComponent<Rigidbody>().velocity = muzzle.forward * speed;
+            Destroy(bullet, 3f);
         }
     }
 }
