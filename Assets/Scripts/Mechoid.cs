@@ -15,9 +15,10 @@ public class Mechoid : MonoBehaviour
     public float minimumSpeed = 1.5f;
     [Tooltip("The curve of speed over distance from stop point")]
     public AnimationCurve accelerationCurve;
-    
+
     private bool fired = false;
     private Animator childAnimator;
+
 
     void Start()
     {
@@ -56,7 +57,7 @@ public class Mechoid : MonoBehaviour
         if (offset < accelerationDistance)
         {
             var positionOnDecelerationPath = offset / accelerationDistance;
-            actualSpeed = Mathf.Lerp(minimumSpeed, speed,accelerationCurve.Evaluate(positionOnDecelerationPath));
+            actualSpeed = Mathf.Lerp(minimumSpeed, speed, accelerationCurve.Evaluate(positionOnDecelerationPath));
         }
         transform.position += Vector3.back * actualSpeed * Time.deltaTime;
         childAnimator.SetBool("isMoving", true);
