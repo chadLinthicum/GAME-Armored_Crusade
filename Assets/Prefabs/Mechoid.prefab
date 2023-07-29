@@ -130,6 +130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mechoid Mesh
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1018298424778622771, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -149,6 +153,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2723195116035675429}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7710039729079004475}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4278245887116978042}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7184269687420653827}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6043853398595330169}
   m_SourcePrefab: {fileID: 100100000, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
 --- !u!4 &8340053430038458229 stripped
 Transform:
@@ -181,3 +197,89 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!136 &7710039729079004475
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8716157172402632143}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5.6657166
+  m_Height: 22.351797
+  m_Direction: 1
+  m_Center: {x: 0.059374332, y: 3.1202946, z: 27.466358}
+--- !u!65 &4278245887116978042
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8716157172402632143}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 12.062571, y: 13.200496, z: 4.1877127}
+  m_Center: {x: 8.27329, y: 5.9078608, z: 31.37769}
+--- !u!65 &7184269687420653827
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8716157172402632143}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 12.062571, y: 13.200496, z: 4.1877127}
+  m_Center: {x: -8.25, y: 5.9078608, z: 31.37769}
+--- !u!65 &6043853398595330169
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8716157172402632143}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 7.0203285, y: 9.194159, z: 9.488295}
+  m_Center: {x: 0.17396927, y: -7.5968323, z: 23.13971}
