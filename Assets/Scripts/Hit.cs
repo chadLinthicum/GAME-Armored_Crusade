@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Hit : MonoBehaviour
 {
-    public GameObject mechoid;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +20,10 @@ public class Hit : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-            Debug.Log("HIT");
+            Animator animator = collision.gameObject.GetComponent<Animator>();
             Destroy(gameObject);
+            animator.SetBool("isHit", true);
+            Debug.Log("HIT");
         }
     }
 }
