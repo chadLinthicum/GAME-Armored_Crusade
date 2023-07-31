@@ -9,6 +9,8 @@ public class Shoot : MonoBehaviour
 
     public float speed;
 
+    public ParticleSystem explodingMechoid;
+
 
     // Start is called before the first frame update
     void Start()
