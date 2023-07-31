@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Hit : MonoBehaviour
 {
+
+    // public ParticleSystem explodingMechoid;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,8 @@ public class Hit : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
+            // Instantiate(explodingMechoid, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
+
             Animator animator = collision.gameObject.GetComponent<Animator>();
             Destroy(gameObject);
             animator.SetBool("isHit", true);
