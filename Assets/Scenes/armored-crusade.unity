@@ -222,12 +222,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mechoidPrefab:
   - {fileID: 1123854114948101564, guid: f53cf6a26e8b5d74bba3733c4c2bf096, type: 3}
-  spawnY: 110
+  wheelstingerPrefab: []
+  mechoidSpawnY: 92.5
+  wheelstingerSpawnY: 23.5
   spawnZ: 1110
-  positions:
-  - {x: -175.4, y: 106.3, z: 872}
-  - {x: -27.7, y: 106.3, z: 872}
-  - {x: 125.35, y: 106.3, z: 872}
+  mechoidPositions: []
+  wheelstingerPositions: []
 --- !u!4 &73135885
 Transform:
   m_ObjectHideFlags: 0
