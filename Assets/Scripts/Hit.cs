@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class Hit : MonoBehaviour
 {
+    public bool isHit = false;
+    public GameObject mechoid;
 
     // public ParticleSystem explodingMechoid;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        mechoid = GameObject.FindWithTag("Mechoid");
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (isHit)
+        {
+            mechoid.transform.position += Vector3.down * 100 * Time.deltaTime;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -28,6 +33,7 @@ public class Hit : MonoBehaviour
             Animator animator = collision.gameObject.GetComponent<Animator>();
             Destroy(gameObject);
             animator.SetBool("isHit", true);
+            isHit = true;
             Debug.Log("HIT");
         }
     }

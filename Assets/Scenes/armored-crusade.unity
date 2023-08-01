@@ -223,10 +223,11 @@ MonoBehaviour:
   mechoidPrefab:
   - {fileID: 1123854114948101564, guid: f53cf6a26e8b5d74bba3733c4c2bf096, type: 3}
   wheelstingerPrefab:
-  - {fileID: 1803271355249400117, guid: ea24fd1c5089b79419e38a54c13f9b33, type: 3}
+  - {fileID: 9094252567913059539, guid: ea24fd1c5089b79419e38a54c13f9b33, type: 3}
   mechoidSpawnY: 92.5
-  wheelstingerSpawnY: 23.5
-  spawnZ: 1110
+  wheelstingerSpawnY: 23
+  mechoidSpawnZ: 1100
+  wheelslingerSpawnZ: 1100
   mechoidPositions: []
   wheelstingerPositions: []
 --- !u!4 &73135885
