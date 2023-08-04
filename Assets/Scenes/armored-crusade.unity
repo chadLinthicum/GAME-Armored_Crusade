@@ -226,8 +226,7 @@ MonoBehaviour:
   - {fileID: 9094252567913059539, guid: ea24fd1c5089b79419e38a54c13f9b33, type: 3}
   mechoidSpawnY: 92.5
   wheelstingerSpawnY: 23
-  mechoidSpawnZ: 1100
-  wheelslingerSpawnZ: 1100
+  spawnZ: 1100
   mechoidPositions: []
   wheelstingerPositions: []
 --- !u!4 &73135885
@@ -588,6 +587,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 502100277}
   m_LocalEulerAnglesHint: {x: 15.206, y: -30, z: 0}
+--- !u!1 &1655731978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2040241845809317966, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
+  m_PrefabInstance: {fileID: 5764813134975363974}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1655731981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655731978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4644024d65f737c4a84bc6e1f863aaa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1721658938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1115,7 +1131,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4280478381585976756, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1939499918}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2040241845809317966, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1655731981}
   m_SourcePrefab: {fileID: 100100000, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
