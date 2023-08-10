@@ -1014,7 +1014,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 230475657281315137, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1388689476973812210, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: m_LocalScale.z
@@ -1068,9 +1068,27 @@ PrefabInstance:
       propertyPath: speed
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 6394216800751300233, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
+      propertyPath: m_text
+      value: 'Score:
+
+        000000'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394216800751300233, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 7299518660075547716, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
-      value: 0
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579893249224072880, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
+      propertyPath: m_text
+      value: "Time: \n01:00"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579893249224072880, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8647341127368473804, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: far clip plane

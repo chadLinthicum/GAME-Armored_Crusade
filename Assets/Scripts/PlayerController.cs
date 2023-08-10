@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,15 +14,56 @@ public class PlayerController : MonoBehaviour
 
     public GameObject projectilePrefab;
 
+    // GUI components we can update
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI timerText;
+    public TextMeshProUGUI healthText;
+
+    // data shown on the GUI
+    private int playerScore = 0;
+    private float playerTime = 0;
+    private float playerHealth = 100;
+
     // Start is called before the first frame update
     void Start()
     {
 
     }
 
+    string formatTime(float timeInSeconds) {
+        int timeInSecondsInt = (int)timeInSeconds;
+        int minutes = (int) (timeInSeconds / 60f);
+        int seconds = timeInSecondsInt - (minutes * 60);
+        return minutes.ToString("D2") + ":" + seconds.ToString("D2");
+    }
+
+    string formatHealth(float hp) {
+        string healthStr = "";
+        int numBars = Mathf.RoundToInt(hp / 10f);
+        for (int i=0; i<numBars; i++) {
+            healthStr += "█";
+        }
+        return healthStr;   
+    }
+
+    void updateGUI() {
+        
+        if (scoreText) scoreText.text = "Score:\n" + playerScore.ToString("000000");
+
+        if (timerText) timerText.text = "Time:\n" + formatTime(playerTime);
+        
+        if (healthText) healthText.text = "Health: " + formatHealth(playerHealth);
+    }
+    
     // Update is called once per frame
     void Update()
     {
+        // fake value to test the gui
+        playerScore++;
+
+        // increase player time
+        playerTime += Time.deltaTime; 
+        
         // Move object horizontally based on mouse movement
 
         // Keep the player in bounds
@@ -55,6 +97,8 @@ public class PlayerController : MonoBehaviour
         //{
         //    Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         //}
+
+        updateGUI();
     }
 }
 
