@@ -18,7 +18,7 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
             GameObject bullet = Instantiate(missile, muzzle.position, muzzle.rotation);
             bullet.GetComponent<Rigidbody>().velocity = muzzle.forward * speed;
