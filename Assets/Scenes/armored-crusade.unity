@@ -547,7 +547,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &520669677
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2257,7 +2257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2804309895463902350, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2821374781245643404, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: m_Name
@@ -2271,36 +2271,13 @@ PrefabInstance:
       propertyPath: speed
       value: 25
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 6394216800751300233, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
-      propertyPath: m_text
-      value: 'Score:
-
-        000000'
-      objectReference: {fileID: 0}
-    - target: {fileID: 6394216800751300233, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 40
-=======
     - target: {fileID: 6474290257910401626, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: m_IsActive
-      value: 0
->>>>>>> 1f0549acbbb6f47f93217574cca8b15f7bd33e01
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7299518660075547716, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
-<<<<<<< HEAD
-      objectReference: {fileID: 0}
-    - target: {fileID: 8579893249224072880, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
-      propertyPath: m_text
-      value: "Time: \n01:00"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8579893249224072880, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 40
-=======
->>>>>>> 1f0549acbbb6f47f93217574cca8b15f7bd33e01
       objectReference: {fileID: 0}
     - target: {fileID: 8647341127368473804, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: far clip plane
