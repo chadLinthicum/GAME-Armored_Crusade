@@ -8,10 +8,10 @@ public class PlayerController : MonoBehaviour
     public float horizontalInput;
     public float verticalInput;
     public float speed = 30.0f;
-    public float xRangeLeft = -16.0f;
-    public float xRangeRight = 16.0f;
-    public float zRangeBottom = -4.0f;
-    private float zRangeTop = 16.0f;
+    public float xRangeLeft = 44.0f;
+    public float xRangeRight = 22.0f;
+    public float zRangeBottom = -17.0f;
+    public float zRangeTop = 10.0f;
 
     public GameObject projectilePrefab;
 
@@ -53,9 +53,9 @@ public class PlayerController : MonoBehaviour
     void updateGUI()
     {
 
-        if (scoreText) scoreText.text = "SCORE\n" + playerScore.ToString("000000");
+        if (scoreText) scoreText.text = " SCORE\n<mspace=.75em>" + playerScore.ToString("000000");
 
-        if (timerText) timerText.text = "TIMER\n" + formatTime(playerTime);
+        if (timerText) timerText.text = "TIMER\n<mspace=.75em>" + formatTime(playerTime);
 
         if (healthText) healthText.text = formatHealth(playerHealth);
     }
