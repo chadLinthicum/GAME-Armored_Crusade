@@ -49,7 +49,6 @@ public class Mechoid : MonoBehaviour
             bullet.transform.position = Vector3.MoveTowards(transform.position, playerPos, 5f * Time.deltaTime);
             fired = true;
             Destroy(bullet, 5f);
-
         }
         if (fired == true)
         {

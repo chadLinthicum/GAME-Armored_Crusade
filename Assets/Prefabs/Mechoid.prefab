@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1688041138189704433}
   m_Layer: 0
   m_Name: Mechoid
-  m_TagString: Untagged
+  m_TagString: Mechoid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c297be5a93f030e4390b88ee55902ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 150
+  speed: 200
   zStop: 150
   boundary: -1200
   laser: {fileID: 7390973323096283027, guid: 723415823c7d2014188466592033cef0, type: 3}
@@ -61,7 +61,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9129704136869366077}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: stinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,6 +135,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c8c03308a53f5814d94fe13fb0a48491, type: 2}
+    - target: {fileID: -8141413835627246813, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -368958254992310349, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
       propertyPath: m_Name
       value: Mechoid Mesh
@@ -145,12 +153,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Mechoid
       objectReference: {fileID: 0}
     - target: {fileID: 1018298424778622771, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d853ee034c51a3946ac43e62309c5d22, type: 2}
+    - target: {fileID: 5751315934014233222, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7446124989654936247, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7448529347100528316, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
