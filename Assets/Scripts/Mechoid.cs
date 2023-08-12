@@ -5,8 +5,11 @@ using UnityEngine;
 public class Mechoid : MonoBehaviour
 {
     public float speed = 150.0f;
-    public float zStop = 100.0f;
+    public float zStop = 150.0f;
     public float boundary = -1200.0f;
+
+    public GameObject laser;
+    public Transform stinger;
 
     [Tooltip("The distance from zStop that the drone starts decelerating / stops accelerating")]
     public float accelerationDistance = 10f;
@@ -34,11 +37,15 @@ public class Mechoid : MonoBehaviour
         }
         if (transform.position.z < zStop && fired == false)
         {
+            Move();
             childAnimator.SetBool("isMoving", false);
 
-            //TODO - Code for firing attack
+            GameObject bullet = Instantiate(laser, stinger.position, stinger.rotation);
+            //bullet.GetComponent<Rigidbody>().velocity = stinger.forward * speed;
+            fired = true;
+            Destroy(bullet, 5f);
 
-            Invoke("StartMovingAgain", 2.0f);
+            //Invoke("StartMovingAgain", 2.0f);
 
         }
         if (fired == true)
@@ -54,11 +61,11 @@ public class Mechoid : MonoBehaviour
         var actualSpeed = speed;
         var positionZ = transform.position.z;
         var offset = Mathf.Abs(positionZ - zStop);
-        if (offset < accelerationDistance)
-        {
-            var positionOnDecelerationPath = offset / accelerationDistance;
-            actualSpeed = Mathf.Lerp(minimumSpeed, speed, accelerationCurve.Evaluate(positionOnDecelerationPath));
-        }
+        //if (offset < accelerationDistance)
+        //{
+        //    var positionOnDecelerationPath = offset / accelerationDistance;
+        //    actualSpeed = Mathf.Lerp(minimumSpeed, speed, accelerationCurve.Evaluate(positionOnDecelerationPath));
+        //}
         transform.position += Vector3.back * actualSpeed * Time.deltaTime;
         childAnimator.SetBool("isMoving", true);
     }
