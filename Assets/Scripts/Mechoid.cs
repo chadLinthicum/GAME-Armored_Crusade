@@ -10,49 +10,51 @@ public class Mechoid : MonoBehaviour
 
     public GameObject laser;
     public Transform stinger;
+    public GameObject player;
 
-    [Tooltip("The distance from zStop that the drone starts decelerating / stops accelerating")]
-    public float accelerationDistance = 10f;
-    [Tooltip("Minimum speed during acceleration and deceleration, needs to be > 0 to avoid problem reaching and leaving the stop point")]
-    [Min(0.1f)]
-    public float minimumSpeed = 1.5f;
-    [Tooltip("The curve of speed over distance from stop point")]
-    public AnimationCurve accelerationCurve;
+    public Vector3 playerPos;
+
+    //[Tooltip("The distance from zStop that the drone starts decelerating / stops accelerating")]
+    //public float accelerationDistance = 10f;
+    //[Tooltip("Minimum speed during acceleration and deceleration, needs to be > 0 to avoid problem reaching and leaving the stop point")]
+    //[Min(0.1f)]
+    //public float minimumSpeed = 1.5f;
+    //[Tooltip("The curve of speed over distance from stop point")]
+    //public AnimationCurve accelerationCurve;
 
     private bool fired = false;
     private Animator childAnimator;
 
-
     void Start()
     {
         childAnimator = GetComponentInChildren<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player");
+
     }
 
-    // Update is called once per frame
     void Update()
     {
+        playerPos = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.y);
         if (transform.position.z > zStop)
         {
             Move();
         }
         if (transform.position.z < zStop && fired == false)
         {
+            Debug.Log(playerPos);
             Move();
             childAnimator.SetBool("isMoving", false);
 
             GameObject bullet = Instantiate(laser, stinger.position, stinger.rotation);
-            //bullet.GetComponent<Rigidbody>().velocity = stinger.forward * speed;
+            bullet.transform.position = Vector3.MoveTowards(transform.position, playerPos, 5f * Time.deltaTime);
             fired = true;
             Destroy(bullet, 5f);
-
-            //Invoke("StartMovingAgain", 2.0f);
 
         }
         if (fired == true)
         {
             Move();
         }
-
         CheckBounds();
     }
 
