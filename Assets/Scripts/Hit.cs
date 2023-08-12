@@ -20,7 +20,7 @@ public class Hit : MonoBehaviour
     {
         if (isHit)
         {
-            mechoid.transform.position += Vector3.down * 100 * Time.deltaTime;
+            mechoid.transform.position += Vector3.down * 35 * Time.deltaTime;
         }
     }
 
@@ -29,10 +29,8 @@ public class Hit : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
             // Instantiate(explodingMechoid, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
-
-            Animator animator = collision.gameObject.GetComponent<Animator>();
-            Destroy(gameObject);
-            animator.SetBool("isHit", true);
+            //Animator animator = collision.gameObject.GetComponent<Animator>();
+            //animator.SetBool("isHit", true);
             isHit = true;
             Debug.Log("HIT");
         }
