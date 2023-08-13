@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 94975283}
   - component: {fileID: 94975282}
   m_Layer: 0
-  m_Name: Cylinder_1
+  m_Name: R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -345,11 +345,11 @@ Transform:
   m_GameObject: {fileID: 94975281}
   serializedVersion: 2
   m_LocalRotation: {x: -0.693695, y: 0.14968878, z: 0.14637074, w: 0.6891707}
-  m_LocalPosition: {x: 289, y: 19, z: 517}
-  m_LocalScale: {x: 19.559767, y: 712.6, z: 19.559767}
+  m_LocalPosition: {x: 307.06027, y: -265.4449, z: -398.82196}
+  m_LocalScale: {x: 19.559767, y: 712.6, z: 19.559765}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2070219568}
   m_LocalEulerAnglesHint: {x: -90.454, y: -24.171997, z: 48.339996}
 --- !u!1001 &208162904
 PrefabInstance:
@@ -721,7 +721,7 @@ GameObject:
   - component: {fileID: 409109776}
   - component: {fileID: 409109775}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -809,11 +809,11 @@ Transform:
   m_GameObject: {fileID: 409109774}
   serializedVersion: 2
   m_LocalRotation: {x: -0.69417226, y: -0.14745982, z: -0.1486345, w: 0.68868595}
-  m_LocalPosition: {x: -320, y: 21, z: 517}
+  m_LocalPosition: {x: -301.93973, y: -263.4449, z: -398.82196}
   m_LocalScale: {x: 19.559767, y: 712.6, z: 19.559767}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2070219568}
   m_LocalEulerAnglesHint: {x: -90.454, y: -24.17102, z: 0}
 --- !u!1 &502100276
 GameObject:
@@ -2307,7 +2307,9 @@ Transform:
   m_LocalPosition: {x: -66.477455, y: 260.9043, z: 777.4124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 409109778}
+  - {fileID: 94975285}
   m_Father: {fileID: 502100277}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2129370832
@@ -2892,5 +2894,3 @@ SceneRoots:
   m_Roots:
   - {fileID: 5764813134975363974}
   - {fileID: 502100277}
-  - {fileID: 409109778}
-  - {fileID: 94975285}
