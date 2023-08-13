@@ -33,6 +33,7 @@ public class Hit : MonoBehaviour
             //animator.SetBool("isHit", true);
             isHit = true;
             Debug.Log("HIT");
+            Destroy(gameObject);
         }
     }
 }
