@@ -10,9 +10,6 @@ public class Mechoid : MonoBehaviour
 
     public GameObject laser;
     public Transform stinger;
-    public GameObject player;
-
-    public Vector3 playerPos;
 
     //[Tooltip("The distance from zStop that the drone starts decelerating / stops accelerating")]
     //public float accelerationDistance = 10f;
@@ -28,27 +25,25 @@ public class Mechoid : MonoBehaviour
     void Start()
     {
         childAnimator = GetComponentInChildren<Animator>();
-        player = GameObject.FindGameObjectWithTag("Player");
+
 
     }
 
     void Update()
     {
-        playerPos = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.y);
         if (transform.position.z > zStop)
         {
             Move();
         }
         if (transform.position.z < zStop && fired == false)
         {
-            Debug.Log(playerPos);
             Move();
             childAnimator.SetBool("isMoving", false);
 
-            GameObject bullet = Instantiate(laser, stinger.position, stinger.rotation);
-            bullet.transform.position = Vector3.MoveTowards(transform.position, playerPos, 5f * Time.deltaTime);
+
+            Instantiate(laser, stinger.position, stinger.rotation);
             fired = true;
-            Destroy(bullet, 5f);
+
         }
         if (fired == true)
         {

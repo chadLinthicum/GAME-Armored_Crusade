@@ -5,7 +5,7 @@ using UnityEngine;
 public class Hit : MonoBehaviour
 {
     public bool isHit = false;
-    public GameObject mechoid;
+    private GameObject mechoid;
 
     // public ParticleSystem explodingMechoid;
 
