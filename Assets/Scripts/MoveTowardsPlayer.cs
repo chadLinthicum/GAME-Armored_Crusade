@@ -20,7 +20,8 @@ public class MoveTowardsPlayer : MonoBehaviour
     void Update()
     {
         transform.LookAt(playerPos);
-        transform.position = Vector3.MoveTowards(transform.position, playerPos, speed * Time.deltaTime);
+        // transform.position = Vector3.MoveTowards(transform.position, playerPos, speed * Time.deltaTime);
+        transform.position += transform.forward * speed * Time.deltaTime; 
         Destroy(gameObject, 5f);
     }
 }
