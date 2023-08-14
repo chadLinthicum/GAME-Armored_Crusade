@@ -6,19 +6,20 @@ public class MoveTowardsPlayer : MonoBehaviour
 {
     private GameObject player;
     public float speed;
-    public Vector3 playerPos;
-
+    private Vector3 playerPos;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        playerPos = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.y);
+        playerPos = player.transform.position;
+        //transform.rotation = Quaternion.LookRotation(playerPos);
     }
 
     // Update is called once per frame
     void Update()
     {
+        transform.LookAt(playerPos);
         transform.position = Vector3.MoveTowards(transform.position, playerPos, speed * Time.deltaTime);
         Destroy(gameObject, 5f);
     }
