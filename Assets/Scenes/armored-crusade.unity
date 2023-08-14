@@ -345,7 +345,7 @@ Transform:
   m_GameObject: {fileID: 94975281}
   serializedVersion: 2
   m_LocalRotation: {x: -0.693695, y: 0.14968878, z: 0.14637074, w: 0.6891707}
-  m_LocalPosition: {x: 307.06027, y: -265.4449, z: -398.82196}
+  m_LocalPosition: {x: 308.5, y: -265, z: -399}
   m_LocalScale: {x: 19.559767, y: 712.6, z: 19.559765}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1016,6 +1016,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4280478381585976756, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
   m_PrefabInstance: {fileID: 5764813134975363974}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1031689108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1031689109}
+  m_Layer: 0
+  m_Name: Position
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1031689109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031689108}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.95, y: 0.26, z: -19.88}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1861541925}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1043642458 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3218048588628891958, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
@@ -2627,7 +2658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 803938109152476507, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 1388689476973812210, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: m_LocalScale.z
@@ -2877,6 +2908,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3218048588628891958, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       insertIndex: -1
       addedObject: {fileID: 520669677}
+    - targetCorrespondingSourceObject: {fileID: 928788603836750614, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1031689109}
     - targetCorrespondingSourceObject: {fileID: 928788603836750614, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1371429389}
