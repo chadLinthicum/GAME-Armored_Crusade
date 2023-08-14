@@ -13,15 +13,23 @@ public class MoveTowardsPlayer : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerPos = player.transform.position;
-        //transform.rotation = Quaternion.LookRotation(playerPos);
+        transform.LookAt(playerPos);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(playerPos);
         // transform.position = Vector3.MoveTowards(transform.position, playerPos, speed * Time.deltaTime);
-        transform.position += transform.forward * speed * Time.deltaTime; 
+        transform.position += transform.forward * speed * Time.deltaTime;
         Destroy(gameObject, 5f);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("HIYO");
+            Destroy(gameObject);
+        }
     }
 }
