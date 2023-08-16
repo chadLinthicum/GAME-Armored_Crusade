@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -33,12 +33,12 @@ public class Health : MonoBehaviour
             if (health == 2)
             {
                 healthHUD.color = new Color32(204, 207, 62, 255);
-                healthHUD.text = "2";
+                healthHUD.text = "██";
             }
             if (health == 1)
             {
                 healthHUD.color = new Color32(207, 104, 81, 255);
-                healthHUD.text = "3";
+                healthHUD.text = "█";
             }
             if (health == 0)
                 Destroy(player);
