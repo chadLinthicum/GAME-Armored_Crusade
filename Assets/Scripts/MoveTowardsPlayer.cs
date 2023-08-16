@@ -7,6 +7,7 @@ public class MoveTowardsPlayer : MonoBehaviour
     private GameObject player;
     public float speed;
     private Vector3 playerPos;
+    public int health;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,7 @@ public class MoveTowardsPlayer : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         playerPos = player.transform.position;
         transform.LookAt(playerPos);
+        health = 3;
     }
 
     // Update is called once per frame
@@ -24,11 +26,13 @@ public class MoveTowardsPlayer : MonoBehaviour
         Destroy(gameObject, 5f);
     }
 
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            Debug.Log("HIYO");
+            health = health - 1;
+            Debug.Log("Health: " + health);
             Destroy(gameObject);
         }
     }
