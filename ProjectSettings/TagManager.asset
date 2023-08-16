@@ -6,7 +6,8 @@ TagManager:
   tags:
   - DestroyMe
   - Mechoid
-  - Mechoid_Projectile
+  - Enemy_Projectile
+  - Health
   layers:
   - Default
   - TransparentFX
