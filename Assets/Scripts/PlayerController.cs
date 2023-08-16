@@ -18,12 +18,12 @@ public class PlayerController : MonoBehaviour
     // GUI components we can update
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timerText;
-    public TextMeshPro healthText;
+    //public TextMeshPro healthText;
 
     // data shown on the GUI
     private int playerScore = 0;
     private float playerTime = 0;
-    private float playerHealth = 60;
+    //private float playerHealth = 60;
 
     // Start is called before the first frame update
     void Start()
@@ -39,16 +39,16 @@ public class PlayerController : MonoBehaviour
         return minutes.ToString("D2") + ":" + seconds.ToString("D2");
     }
 
-    string formatHealth(float hp)
-    {
-        string healthStr = "";
-        int numBars = Mathf.RoundToInt(hp / 10f);
-        for (int i = 0; i < numBars; i++)
-        {
-            healthStr += "█";
-        }
-        return healthStr;
-    }
+    //string formatHealth(float hp)
+    //{
+    //    string healthStr = "";
+    //    int numBars = Mathf.RoundToInt(hp / 10f);
+    //    for (int i = 0; i < numBars; i++)
+    //    {
+    //        healthStr += "█";
+    //    }
+    //    return healthStr;
+    //}
 
     void updateGUI()
     {
@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
 
         if (timerText) timerText.text = "TIMER\n<mspace=.75em>" + formatTime(playerTime);
 
-        if (healthText) healthText.text = formatHealth(playerHealth);
+        //if (healthText) healthText.text = formatHealth(playerHealth);
     }
 
     // Update is called once per frame
