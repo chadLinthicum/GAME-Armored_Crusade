@@ -1082,11 +1082,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aab872cebdc82d43a472a17fa15d0cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  healthHUD: {fileID: 1371429390}
+  player: {fileID: 1213285377}
   projectile: {fileID: 7390973323096283027, guid: 723415823c7d2014188466592033cef0, type: 3}
 --- !u!224 &1043642458 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3218048588628891958, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
+  m_PrefabInstance: {fileID: 5764813134975363974}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1213285377 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2040241845809317966, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
   m_PrefabInstance: {fileID: 5764813134975363974}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1220276681
@@ -1336,8 +1342,8 @@ GameObject:
   - component: {fileID: 1371429391}
   - component: {fileID: 1371429390}
   m_Layer: 0
-  m_Name: Health
-  m_TagString: Untagged
+  m_Name: HealthHUD
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
