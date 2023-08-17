@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: -8250737458442209659}
   m_Layer: 0
   m_Name: bolt_yellow
-  m_TagString: Mechoid_Projectile
+  m_TagString: Enemy_Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
