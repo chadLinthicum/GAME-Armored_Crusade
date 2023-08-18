@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -41,8 +41,10 @@ public class Health : MonoBehaviour
                 healthHUD.text = "█";
             }
             if (health == 0)
+            {
                 Destroy(player);
-
+                SceneManager.LoadScene(1);
+            }
         }
     }
 }

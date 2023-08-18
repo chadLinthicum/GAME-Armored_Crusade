@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/armored-crusade.unity
+    guid: b95d631b9f2e0814ea06031646dd7e68
+  - enabled: 1
+    path: Assets/Scenes/gameOver.unity
+    guid: 9bee86915a9c0a84eb74ff43e6819c25
   m_configObjects: {}
