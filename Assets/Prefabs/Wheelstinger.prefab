@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8195138147501460803}
   - component: {fileID: 4179809553438285197}
   - component: {fileID: 7962998300099539082}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: group_0_16768282
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 4760030631439361378}
   - component: {fileID: 887282210370128998}
   - component: {fileID: 463108278182942697}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: group_0_16718362
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 1446530344692092177}
   - component: {fileID: 8064751277909128010}
   - component: {fileID: 3744436354009435369}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: group_0_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 4326509268749406523}
   m_Layer: 6
   m_Name: Wheelstinger Mesh
-  m_TagString: Untagged
+  m_TagString: Wheelstinger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -383,7 +383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 993343588084040457}
   - component: {fileID: 4799345808118002425}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheelstinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

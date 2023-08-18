@@ -8,6 +8,7 @@ TagManager:
   - Mechoid
   - Enemy_Projectile
   - Health
+  - Wheelstinger
   layers:
   - Default
   - TransparentFX

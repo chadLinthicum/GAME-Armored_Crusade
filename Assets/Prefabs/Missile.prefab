@@ -99,7 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHit: 0
-  explosionPrefab: {fileID: 1953017572017508349, guid: 10e32f5326c163a45bbd92efef026aa5, type: 3}
+  explosionPrefab_Mechoid: {fileID: 1953017572017508349, guid: 10e32f5326c163a45bbd92efef026aa5, type: 3}
+  explosionPrefab_Wheelstinger: {fileID: 1953017572017508349, guid: aec96a76e62a16041a4f2eadcb2e4e78, type: 3}
 --- !u!54 &4349530638313116272
 Rigidbody:
   m_ObjectHideFlags: 0
