@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHit: 0
-  mechoid: {fileID: 1123854114948101564, guid: f53cf6a26e8b5d74bba3733c4c2bf096, type: 3}
+  explosionPrefab: {fileID: 1953017572017508349, guid: 10e32f5326c163a45bbd92efef026aa5, type: 3}
 --- !u!54 &4349530638313116272
 Rigidbody:
   m_ObjectHideFlags: 0
