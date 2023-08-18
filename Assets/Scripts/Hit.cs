@@ -7,7 +7,7 @@ public class Hit : MonoBehaviour
     public bool isHit = false;
     public GameObject explosionPrefab;
 
-    private GameObject mechoid; 
+    private GameObject mechoid;
 
     // public ParticleSystem explodingMechoid;
 
@@ -34,8 +34,12 @@ public class Hit : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-            if (explosionPrefab) Instantiate(explosionPrefab, collision.gameObject.transform.position, Quaternion.identity);
-            
+            Vector3 newPosition = collision.gameObject.transform.position;
+            newPosition.y += 30f;
+            newPosition.z += 30f;
+            if (explosionPrefab) Instantiate(explosionPrefab, newPosition, Quaternion.identity);
+            Destroy(collision.gameObject);
+
             // Instantiate(explodingMechoid, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
             //Animator animator = collision.gameObject.GetComponent<Animator>();
             //animator.SetBool("isHit", true);

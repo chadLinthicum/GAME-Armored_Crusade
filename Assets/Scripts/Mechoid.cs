@@ -20,55 +20,48 @@ public class Mechoid : MonoBehaviour
     //public AnimationCurve accelerationCurve;
 
     private bool fired = false;
-    private Animator childAnimator;
+    //private Animator childAnimator;
 
     void Start()
     {
-        childAnimator = GetComponentInChildren<Animator>();
-
-
+        //childAnimator = GetComponentInChildren<Animator
     }
 
     void Update()
     {
-        if (transform.position.z > zStop)
+        if (gameObject != null)
         {
             Move();
+            //if (transform.position.z > zStop && fired == false)
+            //{
+            //    Move();
+            //}
+            if (transform.position.z < zStop && fired == false)
+            {
+                //childAnimator.SetBool("isMoving", false);
+                Instantiate(laser, stinger.position, stinger.rotation);
+                fired = true;
+            }
+            //if (fired == true)
+            //{
+            //    Move();
+            //}
+            CheckBounds();
         }
-        if (transform.position.z < zStop && fired == false)
-        {
-            Move();
-            childAnimator.SetBool("isMoving", false);
-
-
-            Instantiate(laser, stinger.position, stinger.rotation);
-            fired = true;
-
-        }
-        if (fired == true)
-        {
-            Move();
-        }
-        CheckBounds();
     }
 
     void Move()
     {
         var actualSpeed = speed;
-        var positionZ = transform.position.z;
-        var offset = Mathf.Abs(positionZ - zStop);
+        //var positionZ = transform.position.z;
+        //var offset = Mathf.Abs(positionZ - zStop);
         //if (offset < accelerationDistance)
         //{
         //    var positionOnDecelerationPath = offset / accelerationDistance;
         //    actualSpeed = Mathf.Lerp(minimumSpeed, speed, accelerationCurve.Evaluate(positionOnDecelerationPath));
         //}
         transform.position += Vector3.back * actualSpeed * Time.deltaTime;
-        childAnimator.SetBool("isMoving", true);
-    }
-    void StartMovingAgain()
-    {
-        childAnimator.SetBool("isMoving", true);
-        fired = true;
+        //childAnimator.SetBool("isMoving", true);
     }
     void CheckBounds()
     {
