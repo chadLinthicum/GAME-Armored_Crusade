@@ -27,7 +27,7 @@ public class SpawnManager : MonoBehaviour
             new Vector3(12f, wheelstingerSpawnY, spawnZ)
         };
         InvokeRepeating("spawnMechoid", 0f, 5f);
-        //InvokeRepeating("spawnWheelstinger", 0f, 7.5f);
+        InvokeRepeating("spawnWheelstinger", 0f, 7.5f);
     }
 
     // Update is called once per frame

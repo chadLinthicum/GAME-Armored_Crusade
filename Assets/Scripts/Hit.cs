@@ -4,46 +4,43 @@ using UnityEngine;
 
 public class Hit : MonoBehaviour
 {
-    public bool isHit = false;
-    public GameObject explosionPrefab;
+    public GameObject explosionPrefab_Mechoid;
+    public GameObject explosionPrefab_Wheelstinger;
 
-    private GameObject mechoid;
+    //private GameObject mechoid;
 
-    // public ParticleSystem explodingMechoid;
-
-    // Start is called before the first frame update
     void Start()
     {
         // FIXME: this could be "any" enemy,
         // not neccessarily the one that got hit
-        mechoid = GameObject.FindWithTag("Mechoid");
+        //mechoid = GameObject.FindWithTag("Mechoid");
     }
 
     // Update is called once per frame
     void Update()
     {
-        // FIXME: this code will never run because this object
-        // is destroyed the exact same moment isHit becomes true
-        if (isHit)
-        {
-            mechoid.transform.position += Vector3.down * 35 * Time.deltaTime;
-        }
+
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        if (collision.gameObject.CompareTag("Mechoid"))
         {
             Vector3 newPosition = collision.gameObject.transform.position;
             newPosition.y += 30f;
             newPosition.z += 30f;
-            if (explosionPrefab) Instantiate(explosionPrefab, newPosition, Quaternion.identity);
-            Destroy(collision.gameObject);
+            if (explosionPrefab_Mechoid) Instantiate(explosionPrefab_Mechoid, newPosition, Quaternion.identity);
+            Destroy(collision.transform.parent.gameObject);
+            Debug.Log("HIT");
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.CompareTag("Wheelstinger"))
+        {
+            Vector3 newPosition = collision.gameObject.transform.position;
+            //newPosition.z += 10f;
+            if (explosionPrefab_Wheelstinger) Instantiate(explosionPrefab_Wheelstinger, newPosition, Quaternion.identity);
+            Destroy(collision.transform.parent.gameObject);
 
-            // Instantiate(explodingMechoid, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
-            //Animator animator = collision.gameObject.GetComponent<Animator>();
-            //animator.SetBool("isHit", true);
-            isHit = true;
             Debug.Log("HIT");
             Destroy(gameObject);
         }
