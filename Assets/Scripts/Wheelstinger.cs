@@ -7,12 +7,17 @@ public class Wheelstinger : MonoBehaviour
     public float speed = 150.0f;
     public float boundary = -1200.0f;
 
+    private GameObject player;
+    private Vector3 playerPos;
+
+    public GameObject explosionPrefab_Wheelstinger;
+
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player_Bottom");
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         Move();
@@ -21,13 +26,27 @@ public class Wheelstinger : MonoBehaviour
 
     void Move()
     {
-        transform.position += Vector3.back * speed * Time.deltaTime;
+        playerPos = player.transform.position;
+        transform.position += (playerPos - transform.position).normalized * speed * Time.deltaTime;
+        transform.LookAt(player.transform.position);
+        transform.Rotate(Vector3.up, 180f);
     }
     void CheckBounds()
     {
         if (transform.localPosition.z < boundary)
         {
             Destroy(gameObject);
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("YO");
+            //Vector3 newPosition = collision.gameObject.transform.position;
+            //newPosition.z += 10f;
+            //if (explosionPrefab_Wheelstinger) Instantiate(explosionPrefab_Wheelstinger, newPosition, Quaternion.identity);
+            //Destroy(collision.transform.parent.gameObject);
         }
     }
 }

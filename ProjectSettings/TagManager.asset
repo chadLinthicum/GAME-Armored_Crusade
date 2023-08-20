@@ -9,6 +9,7 @@ TagManager:
   - Enemy_Projectile
   - Health
   - Wheelstinger
+  - Player_Bottom
   layers:
   - Default
   - TransparentFX
