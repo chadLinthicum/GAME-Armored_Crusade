@@ -418,5 +418,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb2a3f8577e7a547a0352b283b2e358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 150
+  speed: 200
   boundary: -1200
+  explosionPrefab_Wheelstinger: {fileID: 1953017572017508349, guid: aec96a76e62a16041a4f2eadcb2e4e78, type: 3}
