@@ -10,6 +10,7 @@ TagManager:
   - Health
   - Wheelstinger
   - Player_Bottom
+  - Target
   layers:
   - Default
   - TransparentFX

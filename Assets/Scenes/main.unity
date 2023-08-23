@@ -1030,11 +1030,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1943545255684097539, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.17
+      value: -23
       objectReference: {fileID: 0}
     - target: {fileID: 1943545255684097539, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.31
+      value: -38.5
       objectReference: {fileID: 0}
     - target: {fileID: 2040241845809317966, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: m_TagString
@@ -1048,6 +1048,10 @@ PrefabInstance:
       propertyPath: wheelstingerPrefab.Array.data[0]
       value: 
       objectReference: {fileID: 6290621185280701682, guid: ea24fd1c5089b79419e38a54c13f9b33, type: 3}
+    - target: {fileID: 5927294143511765141, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
+      propertyPath: m_TagString
+      value: Target
+      objectReference: {fileID: 0}
     - target: {fileID: 6617077559934310858, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: m_LocalPosition.z
       value: -16.46
@@ -1100,6 +1104,7 @@ PrefabInstance:
     - {fileID: 4217029119399805056, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
     - {fileID: 304769956557986739, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
     - {fileID: 7163409821675782298, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
+    - {fileID: 8835423962706225222, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

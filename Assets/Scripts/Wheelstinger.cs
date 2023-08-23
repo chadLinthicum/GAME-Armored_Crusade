@@ -7,15 +7,12 @@ public class Wheelstinger : MonoBehaviour
     public float speed = 150.0f;
     public float boundary = -1200.0f;
 
-    private GameObject player;
-    private Vector3 playerPos;
-
-    public GameObject explosionPrefab_Wheelstinger;
+    private GameObject target;
+    private Vector3 targetPos;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player_Bottom");
-
+        target = GameObject.FindGameObjectWithTag("Target");
     }
 
     void Update()
@@ -26,9 +23,9 @@ public class Wheelstinger : MonoBehaviour
 
     void Move()
     {
-        playerPos = player.transform.position;
-        transform.position += (playerPos - transform.position).normalized * speed * Time.deltaTime;
-        transform.LookAt(player.transform.position);
+        targetPos = target.transform.position;
+        transform.position += (targetPos - transform.position).normalized * speed * Time.deltaTime;
+        transform.LookAt(target.transform.position);
         transform.Rotate(Vector3.up, 180f);
     }
     void CheckBounds()
