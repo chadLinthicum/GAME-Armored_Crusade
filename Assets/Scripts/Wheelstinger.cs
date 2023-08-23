@@ -42,11 +42,8 @@ public class Wheelstinger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("YO");
-            //Vector3 newPosition = collision.gameObject.transform.position;
-            //newPosition.z += 10f;
-            //if (explosionPrefab_Wheelstinger) Instantiate(explosionPrefab_Wheelstinger, newPosition, Quaternion.identity);
-            //Destroy(collision.transform.parent.gameObject);
+
+            Destroy(gameObject);
         }
     }
 }
