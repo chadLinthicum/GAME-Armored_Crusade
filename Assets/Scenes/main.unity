@@ -869,7 +869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab_Wheelstinger: {fileID: 1953017572017508349, guid: aec96a76e62a16041a4f2eadcb2e4e78, type: 3}
-  explosionPrefab_Generic: {fileID: 1953017572017508349, guid: aec96a76e62a16041a4f2eadcb2e4e78, type: 3}
+  explosionPrefab_Generic: {fileID: 1953017572017508349, guid: 376ff39d750e0ef44b01503268ef4498, type: 3}
 --- !u!1 &1889285572
 GameObject:
   m_ObjectHideFlags: 0
