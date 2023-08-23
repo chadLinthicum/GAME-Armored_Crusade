@@ -2187,6 +2187,7 @@ GameObject:
   - component: {fileID: 520669677}
   - component: {fileID: 520669679}
   - component: {fileID: 520669678}
+  - component: {fileID: 520669680}
   m_Layer: 5
   m_Name: Pause Menu
   m_TagString: Untagged
@@ -2255,6 +2256,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520669676}
   m_CullTransparentMesh: 1
+--- !u!114 &520669680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520669676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b7a3b9a5629fc469ed2c1ca78ccd35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &536924961
 GameObject:
   m_ObjectHideFlags: 0
@@ -6671,10 +6684,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 151
       objectReference: {fileID: 0}
+    - target: {fileID: 5325981631231160562, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
+      propertyPath: speed
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5839341285864391880, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dddd468324cefd7478df32166e5db0ab, type: 2}
+    - target: {fileID: 5947144572439054234, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6218346542468264524, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: speed
       value: 25
@@ -6752,6 +6773,10 @@ PrefabInstance:
     - target: {fileID: 7299518660075547716, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7528534966943013802, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
+      propertyPath: speed
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7641808403744779933, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: m_Materials.Array.data[0]

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CursorLock : MonoBehaviour
+public class CursorLock_ON : MonoBehaviour
 {
 
     void Start()
