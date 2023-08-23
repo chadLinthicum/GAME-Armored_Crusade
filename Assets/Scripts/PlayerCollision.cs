@@ -8,7 +8,7 @@ public class PlayerCollision : MonoBehaviour
     public GameObject explosionPrefab_Generic;
     void OnCollisionEnter(Collision collisionInfo)
     {
-        if (collisionInfo.collider.CompareTag("Wheelstinger")) ;
+        if (collisionInfo.collider.CompareTag("Wheelstinger"))
         {
             Destroy(collisionInfo.gameObject);
             Instantiate(explosionPrefab_Wheelstinger, collisionInfo.gameObject.transform.position, Quaternion.identity);
