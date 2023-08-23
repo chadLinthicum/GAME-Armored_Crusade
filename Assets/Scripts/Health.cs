@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
 
     public GameObject projectile;
 
-    public GameObject explosionPrefab_Wheelstinger;
+    public GameObject explosionPrefab_Generic;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,15 +24,13 @@ public class Health : MonoBehaviour
     {
 
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collisionInfo)
     {
-        if (collision.gameObject.CompareTag("Enemy_Projectile"))
+        if (collisionInfo.gameObject.layer == LayerMask.NameToLayer("Ouch"))
         {
             health--;
             Debug.Log("Health: " + health);
             //Full health color is (88, 161, 87, 255)
-            Destroy(collision.gameObject);
-            Instantiate(explosionPrefab_Wheelstinger, collision.gameObject.transform.position, Quaternion.identity);
             if (health == 2)
             {
                 healthHUD.color = new Color32(204, 207, 62, 255);
@@ -45,6 +43,7 @@ public class Health : MonoBehaviour
             }
             if (health == 0)
             {
+                Instantiate(explosionPrefab_Generic, collisionInfo.gameObject.transform.position, Quaternion.identity);
                 Destroy(player);
                 SceneManager.LoadScene(1);
             }

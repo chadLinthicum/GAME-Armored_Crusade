@@ -711,7 +711,6 @@ GameObject:
   - component: {fileID: 1721658942}
   - component: {fileID: 1721658941}
   - component: {fileID: 1721658940}
-  - component: {fileID: 1721658945}
   - component: {fileID: 1721658944}
   m_Layer: 0
   m_Name: Ground
@@ -820,27 +819,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 25
---- !u!65 &1721658945
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1721658938}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 10, y: 0, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1861541927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -856,7 +834,7 @@ MonoBehaviour:
   healthHUD: {fileID: 1371429390}
   player: {fileID: 1213285377}
   projectile: {fileID: 7390973323096283027, guid: 723415823c7d2014188466592033cef0, type: 3}
-  explosionPrefab_Wheelstinger: {fileID: 1953017572017508349, guid: aec96a76e62a16041a4f2eadcb2e4e78, type: 3}
+  explosionPrefab_Generic: {fileID: 1953017572017508349, guid: 10e32f5326c163a45bbd92efef026aa5, type: 3}
 --- !u!65 &1861541928
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -876,8 +854,22 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 18.063835, y: 10.801788, z: 34.532417}
-  m_Center: {x: -3.1746674, y: -3.47229, z: -16.766209}
+  m_Size: {x: 18.063835, y: 12.579239, z: 34.532417}
+  m_Center: {x: -3.1746674, y: -2.5835648, z: -16.766209}
+--- !u!114 &1861541929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213285377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a9bf7805db32340a35474676fc5665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab_Wheelstinger: {fileID: 1953017572017508349, guid: aec96a76e62a16041a4f2eadcb2e4e78, type: 3}
+  explosionPrefab_Generic: {fileID: 1953017572017508349, guid: aec96a76e62a16041a4f2eadcb2e4e78, type: 3}
 --- !u!1 &1889285572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,6 +1024,10 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 8.249483
       objectReference: {fileID: 0}
+    - target: {fileID: 928788603836750614, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -944.25
+      objectReference: {fileID: 0}
     - target: {fileID: 1943545255684097539, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: m_LocalPosition.y
       value: -7.17
@@ -1052,6 +1048,10 @@ PrefabInstance:
       propertyPath: wheelstingerPrefab.Array.data[0]
       value: 
       objectReference: {fileID: 6290621185280701682, guid: ea24fd1c5089b79419e38a54c13f9b33, type: 3}
+    - target: {fileID: 6617077559934310858, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.46
+      objectReference: {fileID: 0}
     - target: {fileID: 8922831492186617225, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -1103,6 +1103,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2040241845809317966, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1861541929}
     - targetCorrespondingSourceObject: {fileID: 2040241845809317966, guid: 4f205f5022e0c154fabfe0d8f6a62c68, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1861541927}
