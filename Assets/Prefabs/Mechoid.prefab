@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2333532924841307376}
   - component: {fileID: 1688041138189704433}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Mechoid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9129704136869366077}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: stinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c8c03308a53f5814d94fe13fb0a48491, type: 2}
     - target: {fileID: -8141413835627246813, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8141413835627246813, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
       propertyPath: m_TagString
@@ -143,7 +143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -368958254992310349, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -368958254992310349, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
       propertyPath: m_TagString
@@ -155,7 +155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
       propertyPath: m_TagString
@@ -167,7 +167,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d853ee034c51a3946ac43e62309c5d22, type: 2}
     - target: {fileID: 5751315934014233222, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5751315934014233222, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
       propertyPath: m_TagString
@@ -175,7 +175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7446124989654936247, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7446124989654936247, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
       propertyPath: m_TagString
@@ -199,6 +199,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2723195116035675429}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3832280607758552309}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cd19c3f4f00fdb0498825ddb261326ab, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7710039729079004475}
@@ -243,6 +246,33 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!54 &3832280607758552309
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8716157172402632143}
+  serializedVersion: 4
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!136 &7710039729079004475
 CapsuleCollider:
   m_ObjectHideFlags: 0
