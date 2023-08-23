@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/armored-crusade.unity
+    path: Assets/Scenes/main.unity
     guid: b95d631b9f2e0814ea06031646dd7e68
   - enabled: 1
     path: Assets/Scenes/gameOver.unity
