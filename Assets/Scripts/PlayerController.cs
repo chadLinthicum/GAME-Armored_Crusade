@@ -13,9 +13,6 @@ public class PlayerController : MonoBehaviour
     public float zRangeBottom = -17.0f;
     public float zRangeTop = 10.0f;
 
-    public GameObject projectilePrefab;
-    public GameObject muzzleFlashPrefab;
-
     // GUI components we can update
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timerText;
@@ -40,28 +37,12 @@ public class PlayerController : MonoBehaviour
         return minutes.ToString("D2") + ":" + seconds.ToString("D2");
     }
 
-    //string formatHealth(float hp)
-    //{
-    //    string healthStr = "";
-    //    int numBars = Mathf.RoundToInt(hp / 10f);
-    //    for (int i = 0; i < numBars; i++)
-    //    {
-    //        healthStr += "█";
-    //    }
-    //    return healthStr;
-    //}
-
     void updateGUI()
     {
 
         if (scoreText) scoreText.text = " SCORE\n<mspace=.75em>" + playerScore.ToString("000000");
-
         if (timerText) timerText.text = "TIMER\n<mspace=.75em>" + formatTime(playerTime);
-
-        //if (healthText) healthText.text = formatHealth(playerHealth);
     }
-
-    // Update is called once per frame
     void Update()
     {
         // fake value to test the gui
