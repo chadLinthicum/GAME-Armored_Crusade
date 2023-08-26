@@ -12,7 +12,7 @@ public class Wheelstinger : MonoBehaviour
 
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Target");
+        target = GameObject.FindGameObjectWithTag("Player_Bottom");
     }
 
     void Update()
