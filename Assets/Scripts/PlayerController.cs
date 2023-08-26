@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public float zRangeTop = 10.0f;
 
     public GameObject projectilePrefab;
+    public GameObject muzzleFlashPrefab;
 
     // GUI components we can update
     public TextMeshProUGUI scoreText;

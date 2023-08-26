@@ -6,6 +6,7 @@ public class Shoot : MonoBehaviour
 {
     public GameObject missile;
     public Transform muzzle;
+    public GameObject muzzleFlashFX;
 
     public float speed;
 
@@ -20,9 +21,15 @@ public class Shoot : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject bullet = Instantiate(missile, muzzle.position, muzzle.rotation);
-            bullet.GetComponent<Rigidbody>().velocity = muzzle.forward * speed;
-            Destroy(bullet, 3f);
+            if (missile) {
+                GameObject bullet = Instantiate(missile, muzzle.position, muzzle.rotation);
+                bullet.GetComponent<Rigidbody>().velocity = muzzle.forward * speed;
+                Destroy(bullet, 3f);
+            }
+
+            if (muzzleFlashFX) {
+                Instantiate(muzzleFlashFX, muzzle.position, muzzle.rotation);
+            }
         }
     }
 }
