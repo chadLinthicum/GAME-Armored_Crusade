@@ -12,6 +12,7 @@ public class MyButtonScript : MonoBehaviour
 
     public void btn_Retry(int sceneID)
     {
+        Score.playerScore = 0;
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneID);
     }
