@@ -14,6 +14,9 @@ public class SpawnManager : MonoBehaviour
     public Vector3[] mechoidPositions;
     public Vector3[] wheelstingerPositions;
 
+    public static bool wave2 = false;
+    public static bool wave3 = false;
+
     void Start()
     {
         mechoidPositions = new Vector3[] {
@@ -27,13 +30,21 @@ public class SpawnManager : MonoBehaviour
             new Vector3(12f, wheelstingerSpawnY, spawnZ)
         };
         InvokeRepeating("spawnMechoid", 0f, 5f);
-        InvokeRepeating("spawnWheelstinger", 0f, 7.5f);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (Score.playerScore == 100 && !wave2)
+        {
+            InvokeRepeating("spawnWheelstinger", 0f, 7.5f);
+            wave2 = !wave2;
+        }
+        if (Score.playerScore == 200 && !wave3)
+        {
+            InvokeRepeating("spawnBeetlebomber", 0f, 7.5f);
+            wave3 = !wave3;
+        }
     }
 
     void spawnMechoid()

@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
     void updateGUI()
     {
 
-        if (scoreText) scoreText.text = " SCORE\n<mspace=.75em>" + playerScore.ToString("000000");
+        //if (scoreText) scoreText.text = " SCORE\n<mspace=.75em>" + playerScore.ToString("000000");
         if (timerText) timerText.text = "TIMER\n<mspace=.75em>" + formatTime(playerTime);
     }
     void Update()
