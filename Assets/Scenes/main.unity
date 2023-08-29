@@ -328,7 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   mechoidPrefab:
-  - {fileID: 1123854114948101564, guid: f53cf6a26e8b5d74bba3733c4c2bf096, type: 3}
+  - {fileID: 4446997030073595637, guid: 7db03678da15e5c4ea001ce7cf80c278, type: 3}
   wheelstingerPrefab:
   - {fileID: 6290621185280701682, guid: ea24fd1c5089b79419e38a54c13f9b33, type: 3}
   mechoidSpawnY: 92.5
