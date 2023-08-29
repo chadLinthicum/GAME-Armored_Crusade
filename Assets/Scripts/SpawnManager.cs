@@ -6,6 +6,8 @@ using TMPro;
 
 public class SpawnManager : MonoBehaviour
 {
+    public bool debug = false;
+
     public GameObject[] mechoidPrefab;
     public GameObject[] wheelstingerPrefab;
 
@@ -27,8 +29,11 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
-        lbl_ready.gameObject.SetActive(true);
-        StartCoroutine(StopTimeForFiveSeconds());
+        if (debug != true)
+        {
+            lbl_ready.gameObject.SetActive(true);
+            StartCoroutine(StopTimeForFiveSeconds());
+        }
         lbl_wave2.gameObject.SetActive(false);
         lbl_wave3.gameObject.SetActive(false);
         lbl_boss.gameObject.SetActive(false);
