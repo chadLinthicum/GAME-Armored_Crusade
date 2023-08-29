@@ -45,7 +45,7 @@ public class Health : MonoBehaviour
             {
                 Instantiate(explosionPrefab_Generic, collisionInfo.gameObject.transform.position, Quaternion.identity);
                 Destroy(player);
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
             }
         }
     }
