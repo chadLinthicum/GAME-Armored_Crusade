@@ -18,6 +18,7 @@ public class SpawnManager : MonoBehaviour
 
     public static bool wave2 = false;
     public static bool wave3 = false;
+    public static bool boss = false;
 
     public TextMeshProUGUI lbl_boss;
     public TextMeshProUGUI lbl_ready;
@@ -42,7 +43,6 @@ public class SpawnManager : MonoBehaviour
             new Vector3(-23f, wheelstingerSpawnY, spawnZ),
             new Vector3(12f, wheelstingerSpawnY, spawnZ)
         };
-        InvokeRepeating("spawnMechoid", 0f, 5f);
     }
 
     // Update is called once per frame
@@ -62,6 +62,15 @@ public class SpawnManager : MonoBehaviour
             StartCoroutine(StopTimeForTwoSeconds());
             InvokeRepeating("spawnBeetlebomber", 0f, 7.5f);
             wave3 = !wave3;
+        }
+        if (Score.playerScore >= 200 && !boss)
+        {
+            lbl_boss.gameObject.SetActive(true);
+            StartCoroutine(StopTimeForTwoSeconds());
+
+            //TODO - Spawn Boss
+
+            boss = !boss;
         }
     }
 
@@ -95,5 +104,6 @@ public class SpawnManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(5f);
         Time.timeScale = 1f;
         lbl_ready.gameObject.SetActive(false);
+        InvokeRepeating("spawnMechoid", 0f, 5f);
     }
 }
