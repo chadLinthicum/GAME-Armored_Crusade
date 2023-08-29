@@ -21,14 +21,19 @@ public class Shoot : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
-            if (missile) {
-                GameObject bullet = Instantiate(missile, muzzle.position, muzzle.rotation);
-                bullet.GetComponent<Rigidbody>().velocity = muzzle.forward * speed;
-                Destroy(bullet, 3f);
-            }
+            if (Time.timeScale != 0f)
+            {
+                if (missile)
+                {
+                    GameObject bullet = Instantiate(missile, muzzle.position, muzzle.rotation);
+                    bullet.GetComponent<Rigidbody>().velocity = muzzle.forward * speed;
+                    Destroy(bullet, 3f);
+                }
 
-            if (muzzleFlashFX) {
-                Instantiate(muzzleFlashFX, muzzle.position, muzzle.rotation);
+                if (muzzleFlashFX)
+                {
+                    Instantiate(muzzleFlashFX, muzzle.position, muzzle.rotation);
+                }
             }
         }
     }
