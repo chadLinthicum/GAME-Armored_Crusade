@@ -68,7 +68,7 @@ public class SpawnManager : MonoBehaviour
             InvokeRepeating("spawnBeetlebomber", 0f, 7.5f);
             wave3 = !wave3;
         }
-        if (Score.playerScore >= 200 && !boss)
+        if (Score.playerScore >= 250 && !boss)
         {
             lbl_boss.gameObject.SetActive(true);
             StartCoroutine(StopTimeForTwoSeconds());

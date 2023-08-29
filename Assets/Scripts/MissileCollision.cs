@@ -20,7 +20,7 @@ public class MissileCollision : MonoBehaviour
         }
         if (collisionInfo.gameObject.CompareTag("Wheelstinger"))
         {
-            Score.playerScore = Score.playerScore + 100;
+            Score.playerScore = Score.playerScore + 50;
             Vector3 newPosition = collisionInfo.gameObject.transform.position;
             Instantiate(explosionPrefab_Wheelstinger, newPosition, Quaternion.identity);
             Destroy(collisionInfo.transform.parent.gameObject);
