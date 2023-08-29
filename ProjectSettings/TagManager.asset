@@ -11,6 +11,7 @@ TagManager:
   - Wheelstinger
   - Player_Bottom
   - Target
+  - Missile
   layers:
   - Default
   - TransparentFX
