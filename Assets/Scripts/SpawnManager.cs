@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -17,8 +19,19 @@ public class SpawnManager : MonoBehaviour
     public static bool wave2 = false;
     public static bool wave3 = false;
 
+    public TextMeshProUGUI lbl_boss;
+    public TextMeshProUGUI lbl_ready;
+    public TextMeshProUGUI lbl_wave2;
+    public TextMeshProUGUI lbl_wave3;
+
     void Start()
     {
+        lbl_ready.gameObject.SetActive(true);
+        StartCoroutine(StopTimeForFiveSeconds());
+        lbl_wave2.gameObject.SetActive(false);
+        lbl_wave3.gameObject.SetActive(false);
+        lbl_boss.gameObject.SetActive(false);
+
         mechoidPositions = new Vector3[] {
             new Vector3(-115f, mechoidSpawnY, spawnZ),
             new Vector3(-15f, mechoidSpawnY, spawnZ),
@@ -35,13 +48,18 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Score.playerScore == 100 && !wave2)
+        if (Score.playerScore >= 50 && !wave2)
         {
+            lbl_wave2.gameObject.SetActive(true);
+            StartCoroutine(StopTimeForTwoSeconds());
             InvokeRepeating("spawnWheelstinger", 0f, 7.5f);
             wave2 = !wave2;
+
         }
-        if (Score.playerScore == 200 && !wave3)
+        if (Score.playerScore >= 150 && !wave3)
         {
+            lbl_wave3.gameObject.SetActive(true);
+            StartCoroutine(StopTimeForTwoSeconds());
             InvokeRepeating("spawnBeetlebomber", 0f, 7.5f);
             wave3 = !wave3;
         }
@@ -59,5 +77,23 @@ public class SpawnManager : MonoBehaviour
         int wheelstingerIndex = Random.Range(0, wheelstingerPositions.Length);
         Vector3 randomPosition = wheelstingerPositions[wheelstingerIndex];
         Instantiate(wheelstingerPrefab[0], randomPosition, wheelstingerPrefab[0].transform.rotation);
+    }
+
+    private IEnumerator StopTimeForTwoSeconds()
+    {
+        Time.timeScale = 0f;
+        yield return new WaitForSecondsRealtime(2f);
+        Time.timeScale = 1f;
+        lbl_ready.gameObject.SetActive(false);
+        lbl_wave2.gameObject.SetActive(false);
+        lbl_wave3.gameObject.SetActive(false);
+        lbl_boss.gameObject.SetActive(false);
+    }
+    private IEnumerator StopTimeForFiveSeconds()
+    {
+        Time.timeScale = 0f;
+        yield return new WaitForSecondsRealtime(5f);
+        Time.timeScale = 1f;
+        lbl_ready.gameObject.SetActive(false);
     }
 }
