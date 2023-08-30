@@ -4,21 +4,34 @@ using UnityEngine;
 
 public class Beetlebomber : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float speed = 150.0f;
+    public float zStop = 150.0f;
+    public float boundary = -1200.0f;
+
     void Start()
     {
 
     }
 
-    // Update is called once per frame
-
-    public float rotationSpeed = 10f;
-
-    // Update is called once per frame
     void Update()
     {
-        // Rotate the object around its Y-axis
-        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+        if (gameObject != null)
+        {
+            Move();
+            CheckBounds();
+        }
     }
 
+    void Move()
+    {
+        var actualSpeed = speed;
+        transform.position += Vector3.back * actualSpeed * Time.deltaTime;
+    }
+    void CheckBounds()
+    {
+        if (transform.localPosition.z < boundary)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
