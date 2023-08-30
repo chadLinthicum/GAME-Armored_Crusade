@@ -330,11 +330,11 @@ MonoBehaviour:
   mechoidPrefab:
   - {fileID: 4446997030073595637, guid: 7db03678da15e5c4ea001ce7cf80c278, type: 3}
   wheelstingerPrefab:
-  - {fileID: 6290621185280701682, guid: ea24fd1c5089b79419e38a54c13f9b33, type: 3}
+  - {fileID: 6068582082104294185, guid: f8940c766871d0a45ad2d9e1e808b7fd, type: 3}
   beetlebomberPrefab:
   - {fileID: 7735109602230403296, guid: 9deda1c45ad53a24d8f1100a5da48df2, type: 3}
   mechoidSpawnY: 92.5
-  wheelstingerSpawnY: 23
+  wheelstingerSpawnY: 21
   beetlebomberSpawnY: 70
   spawnZ: 1100
   mechoidPositions: []
@@ -856,7 +856,7 @@ Transform:
   m_GameObject: {fileID: 173691956}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.95, y: -19.4, z: -19.88}
+  m_LocalPosition: {x: -2.95, y: -8.13, z: -16.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16027,7 +16027,7 @@ GameObject:
   - component: {fileID: 1721658944}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -13,7 +13,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] beetlebomberPrefab;
 
     public float mechoidSpawnY = 92.5f;
-    public float wheelstingerSpawnY = 23.5f;
+    public float wheelstingerSpawnY = 18f;
     public float beetlebomberSpawnY = 70f;
     public float spawnZ = 1100f;
 

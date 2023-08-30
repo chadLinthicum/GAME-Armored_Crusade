@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class MissileCollision : MonoBehaviour
 {
+    public GameObject explosionPrefab_Beetlebomber;
     public GameObject explosionPrefab_Mechoid;
     public GameObject explosionPrefab_Wheelstinger;
+    public GameObject explosionPrefab_Generic;
 
     private void OnCollisionEnter(Collision collisionInfo)
     {
@@ -23,14 +25,19 @@ public class MissileCollision : MonoBehaviour
             Score.playerScore = Score.playerScore + 50;
             Vector3 newPosition = collisionInfo.gameObject.transform.position;
             Instantiate(explosionPrefab_Wheelstinger, newPosition, Quaternion.identity);
-            Destroy(collisionInfo.transform.parent.gameObject);
+            Destroy(collisionInfo.transform.gameObject);
         }
-        //if (collisionInfo.gameObject.CompareTag("Beetlebomber"))
-        //{
-        //    Score.playerScore = Score.playerScore + 200;
-        //    Vector3 newPosition = collisionInfo.gameObject.transform.position;
-        //    Instantiate(explosionPrefab_Beetlebomber, newPosition, Quaternion.identity);
-        //    Destroy(collisionInfo.transform.parent.gameObject);
-        //}
+        if (collisionInfo.gameObject.CompareTag("Beetlebomber"))
+        {
+            Score.playerScore = Score.playerScore + 200;
+            Vector3 newPosition = collisionInfo.gameObject.transform.position;
+            Instantiate(explosionPrefab_Beetlebomber, newPosition, Quaternion.identity);
+            Destroy(collisionInfo.transform.gameObject);
+        }
+        if (collisionInfo.gameObject.CompareTag("Environment"))
+        {
+            Instantiate(explosionPrefab_Generic, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 }
