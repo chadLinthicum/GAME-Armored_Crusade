@@ -10,13 +10,16 @@ public class SpawnManager : MonoBehaviour
 
     public GameObject[] mechoidPrefab;
     public GameObject[] wheelstingerPrefab;
+    public GameObject[] beetlebomberPrefab;
 
     public float mechoidSpawnY = 92.5f;
     public float wheelstingerSpawnY = 23.5f;
+    public float beetlebomberSpawnY = 70f;
     public float spawnZ = 1100f;
 
     public Vector3[] mechoidPositions;
     public Vector3[] wheelstingerPositions;
+    public Vector3[] beetlebomberPositions;
 
     public static bool wave2 = false;
     public static bool wave3 = false;
@@ -34,6 +37,7 @@ public class SpawnManager : MonoBehaviour
             lbl_ready.gameObject.SetActive(true);
             StartCoroutine(StopTimeForFiveSeconds());
         }
+
         lbl_wave2.gameObject.SetActive(false);
         lbl_wave3.gameObject.SetActive(false);
         lbl_boss.gameObject.SetActive(false);
@@ -47,6 +51,11 @@ public class SpawnManager : MonoBehaviour
             new Vector3(-63f, wheelstingerSpawnY, spawnZ),
             new Vector3(-23f, wheelstingerSpawnY, spawnZ),
             new Vector3(12f, wheelstingerSpawnY, spawnZ)
+        };
+        beetlebomberPositions = new Vector3[] {
+            new Vector3(-46.75f, beetlebomberSpawnY, spawnZ),
+            new Vector3(-23f, beetlebomberSpawnY, spawnZ),
+            new Vector3(12f, beetlebomberSpawnY, spawnZ)
         };
     }
 
@@ -72,9 +81,7 @@ public class SpawnManager : MonoBehaviour
         {
             lbl_boss.gameObject.SetActive(true);
             StartCoroutine(StopTimeForTwoSeconds());
-
             //TODO - Spawn Boss
-
             boss = !boss;
         }
     }
@@ -91,6 +98,13 @@ public class SpawnManager : MonoBehaviour
         int wheelstingerIndex = Random.Range(0, wheelstingerPositions.Length);
         Vector3 randomPosition = wheelstingerPositions[wheelstingerIndex];
         Instantiate(wheelstingerPrefab[0], randomPosition, wheelstingerPrefab[0].transform.rotation);
+    }
+
+    void spawnBeetlebomber()
+    {
+        int beetlebomberIndex = Random.Range(0, beetlebomberPositions.Length);
+        Vector3 randomPosition = beetlebomberPositions[beetlebomberIndex];
+        Instantiate(beetlebomberPrefab[0], randomPosition, beetlebomberPrefab[0].transform.rotation);
     }
 
     private IEnumerator StopTimeForTwoSeconds()
