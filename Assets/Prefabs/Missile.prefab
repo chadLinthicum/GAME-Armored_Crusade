@@ -98,8 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c898c2b29e8b8064184691c703fd659b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab_Beetlebomber: {fileID: 1953017572017508349, guid: 899b54a44b9c10847877f7786f402cc3, type: 3}
   explosionPrefab_Mechoid: {fileID: 1953017572017508349, guid: 10e32f5326c163a45bbd92efef026aa5, type: 3}
   explosionPrefab_Wheelstinger: {fileID: 1953017572017508349, guid: aec96a76e62a16041a4f2eadcb2e4e78, type: 3}
+  explosionPrefab_Generic: {fileID: 1953017572017508349, guid: 444086b755e000a459ef6a88fb38bb25, type: 3}
 --- !u!54 &4349530638313116272
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -10,6 +10,8 @@ public class Wheelstinger : MonoBehaviour
     private GameObject target;
     private Vector3 targetPos;
 
+    private float initialXPos;
+
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player_Bottom");
@@ -25,8 +27,7 @@ public class Wheelstinger : MonoBehaviour
     {
         targetPos = target.transform.position;
         transform.position += (targetPos - transform.position).normalized * speed * Time.deltaTime;
-        transform.LookAt(target.transform.position);
-        transform.Rotate(Vector3.up, 180f);
+        // transform.LookAt(target.transform.position);
     }
     void CheckBounds()
     {
