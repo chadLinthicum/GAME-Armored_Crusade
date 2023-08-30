@@ -5,15 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class StartScreen : MonoBehaviour
 {
-
-
-    private void Update()
-    {
-
-    }
-
-    [SerializeField] GameObject startMenu;
-
     public void LoadScene(int sceneID)
     {
         Time.timeScale = 1f;
