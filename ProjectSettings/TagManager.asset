@@ -12,7 +12,6 @@ TagManager:
   - Player_Bottom
   - Target
   - Missile
-  - Environment
   - Beetlebomber
   layers:
   - Default
@@ -22,7 +21,7 @@ TagManager:
   - Water
   - UI
   - Ouch
-  - 
+  - Generic
   - 
   - 
   - 

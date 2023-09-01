@@ -45,8 +45,9 @@ public class MissileCollision : MonoBehaviour
             Vector3 newPosition = collisionInfo.gameObject.transform.position;
             Instantiate(explosionPrefab_Beetlebomber, newPosition, Quaternion.identity);
             Destroy(collisionInfo.transform.gameObject);
+            Destroy(collisionInfo.transform.parent.gameObject);
         }
-        if (collisionInfo.gameObject.CompareTag("Environment"))
+        if (collisionInfo.gameObject.layer == LayerMask.NameToLayer("Generic"))
         {
             audioSource.PlayOneShot(explosionGeneric);
             Instantiate(explosionPrefab_Generic, transform.position, Quaternion.identity);
