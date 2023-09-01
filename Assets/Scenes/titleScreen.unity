@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1029,20 +1029,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Armored Crusade Credits
-
-
-    Name - Description
-
-
-    Name - Description
-
-
-    Name
-    - Description
-
-
-    Name - Description'
+  m_text: "\u2022 Chad Linthicum: Project lead, core gameplay, models (player tank,
+    beetle bomber, wheel stinger, mechoid), enemy behaviors, level design, wave indicators,
+    wave spawn system, projectiles, various improvements (UI, explosions), game over
+    screen, pause, assorted fixes\n\u2022 Christer \"McFunkypants\" Kaitila: health/timer/score
+    UI, energy projectiles, dune mesh, explosion integration, atmospheric dust, muzzle
+    flash, trail effects, logo sprite, title menu\n\u2022 Patrick McKeown: Music,
+    missile particle explosion\n\u2022 Johan \xD6stling: Smoother start/stop for
+    drones\n\u2022 Chris DeLeon: Sound effects, compiled credits"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 611fdc2d7d05d604aa5ccec4dc0ef800, type: 2}
   m_sharedMaterial: {fileID: 2792936770315303101, guid: 611fdc2d7d05d604aa5ccec4dc0ef800, type: 2}
