@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI timerText;
     //public TextMeshPro healthText;
 
+    private AudioSource tankRollingSound;
+
     // data shown on the GUI
     private int playerScore = 0;
     private float playerTime = 0;
@@ -26,7 +28,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        tankRollingSound = gameObject.GetComponent<AudioSource>();
     }
 
     string formatTime(float timeInSeconds)
@@ -73,6 +75,7 @@ public class PlayerController : MonoBehaviour
         // Player input
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(transform.right * horizontalInput * Time.deltaTime * speed);
+        tankRollingSound.pitch = 0.7f+Mathf.Abs(horizontalInput)*0.35f;
 
         verticalInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
