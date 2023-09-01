@@ -9,10 +9,20 @@ public class MissileCollision : MonoBehaviour
     public GameObject explosionPrefab_Wheelstinger;
     public GameObject explosionPrefab_Generic;
 
+    private AudioSource audioSource;
+    public AudioClip explosionEnemy;
+    public AudioClip explosionGeneric;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void OnCollisionEnter(Collision collisionInfo)
     {
         if (collisionInfo.gameObject.CompareTag("Mechoid"))
         {
+            audioSource.PlayOneShot(explosionEnemy);
             Score.playerScore = Score.playerScore + 50;
             Vector3 newPosition = collisionInfo.gameObject.transform.position;
             newPosition.y += 30f;
@@ -22,6 +32,7 @@ public class MissileCollision : MonoBehaviour
         }
         if (collisionInfo.gameObject.CompareTag("Wheelstinger"))
         {
+            audioSource.PlayOneShot(explosionEnemy);
             Score.playerScore = Score.playerScore + 50;
             Vector3 newPosition = collisionInfo.gameObject.transform.position;
             Instantiate(explosionPrefab_Wheelstinger, newPosition, Quaternion.identity);
@@ -29,6 +40,7 @@ public class MissileCollision : MonoBehaviour
         }
         if (collisionInfo.gameObject.CompareTag("Beetlebomber"))
         {
+            audioSource.PlayOneShot(explosionEnemy);
             Score.playerScore = Score.playerScore + 200;
             Vector3 newPosition = collisionInfo.gameObject.transform.position;
             Instantiate(explosionPrefab_Beetlebomber, newPosition, Quaternion.identity);
@@ -36,6 +48,7 @@ public class MissileCollision : MonoBehaviour
         }
         if (collisionInfo.gameObject.CompareTag("Environment"))
         {
+            audioSource.PlayOneShot(explosionGeneric);
             Instantiate(explosionPrefab_Generic, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

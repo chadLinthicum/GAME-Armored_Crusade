@@ -41,7 +41,6 @@ public class PlayerController : MonoBehaviour
 
     void updateGUI()
     {
-
         //if (scoreText) scoreText.text = " SCORE\n<mspace=.75em>" + playerScore.ToString("000000");
         if (timerText) timerText.text = "TIMER\n<mspace=.75em>" + formatTime(playerTime);
     }
@@ -79,7 +78,7 @@ public class PlayerController : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
 
-        tankRollingSound.pitch = 0.7f+Mathf.Abs(horizontalInput)*0.25f+Mathf.Abs(verticalInput)*0.4f;
+        tankRollingSound.pitch = 0.7f + Mathf.Abs(horizontalInput) * 0.25f + Mathf.Abs(verticalInput) * 0.4f;
 
         updateGUI();
     }

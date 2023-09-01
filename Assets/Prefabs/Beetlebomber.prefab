@@ -243,6 +243,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4579708280270951310}
+  - component: {fileID: 8219764537369676573}
+  - component: {fileID: 7966078006639794004}
+  - component: {fileID: 8693337720931066016}
   m_Layer: 0
   m_Name: barrel
   m_TagString: Untagged
@@ -266,6 +269,67 @@ Transform:
   - {fileID: -8679921383154817045}
   m_Father: {fileID: 5989014598745595203}
   m_LocalEulerAnglesHint: {x: -6.834, y: -0.297, z: 2.494}
+--- !u!114 &8219764537369676573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2418414284197492570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a501ef81670d1a44385cb25b49100b53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPosZ: 0
+--- !u!54 &7966078006639794004
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2418414284197492570}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &8693337720931066016
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2418414284197492570}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 12.138575, y: 12.409589, z: 16.303093}
+  m_Center: {x: -16.251566, y: 9.417234, z: 0.35513076}
 --- !u!1 &2775412479487317621
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,7 +758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2721baad3ebf7e3478604bc74678b5ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 300
   zStop: 150
   boundary: -1200
 --- !u!54 &3948037963879429324

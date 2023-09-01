@@ -38,6 +38,8 @@ public class SpawnManager : MonoBehaviour
             StartCoroutine(StopTimeForFiveSeconds());
         }
 
+        InvokeRepeating("spawnBeetlebomber", 0f, 5f);
+
         lbl_wave2.gameObject.SetActive(false);
         lbl_wave3.gameObject.SetActive(false);
         lbl_boss.gameObject.SetActive(false);
@@ -123,6 +125,5 @@ public class SpawnManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(5f);
         Time.timeScale = 1f;
         lbl_ready.gameObject.SetActive(false);
-        InvokeRepeating("spawnMechoid", 0f, 5f);
     }
 }
