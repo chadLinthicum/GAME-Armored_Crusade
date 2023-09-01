@@ -11,7 +11,7 @@ public class MissileCollision : MonoBehaviour
 
     private AudioSource audioSource;
     public AudioClip explosionEnemy;
-    public AudioClip explosionGeneric;
+    // public AudioClip explosionGeneric;
 
     void Start()
     {
@@ -45,11 +45,12 @@ public class MissileCollision : MonoBehaviour
             Vector3 newPosition = collisionInfo.gameObject.transform.position;
             Instantiate(explosionPrefab_Beetlebomber, newPosition, Quaternion.identity);
             Destroy(collisionInfo.transform.gameObject);
-            Destroy(collisionInfo.transform.parent.gameObject);
+
         }
         if (collisionInfo.gameObject.layer == LayerMask.NameToLayer("Generic"))
         {
-            audioSource.PlayOneShot(explosionGeneric);
+            //not working for some reason
+            // audioSource.PlayOneShot(explosionGeneric);
             Instantiate(explosionPrefab_Generic, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

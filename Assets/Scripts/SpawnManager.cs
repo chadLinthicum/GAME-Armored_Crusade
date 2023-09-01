@@ -30,6 +30,9 @@ public class SpawnManager : MonoBehaviour
     public TextMeshProUGUI lbl_wave2;
     public TextMeshProUGUI lbl_wave3;
 
+    private AudioSource audioSource;
+    public AudioClip wave;
+
     void Start()
     {
         if (debug != true)
@@ -38,7 +41,9 @@ public class SpawnManager : MonoBehaviour
             StartCoroutine(StopTimeForFiveSeconds());
         }
 
-        InvokeRepeating("spawnBeetlebomber", 0f, 5f);
+        audioSource = GetComponent<AudioSource>();
+
+        InvokeRepeating("spawnMechoid", 0f, 5f);
 
         lbl_wave2.gameObject.SetActive(false);
         lbl_wave3.gameObject.SetActive(false);
@@ -66,6 +71,7 @@ public class SpawnManager : MonoBehaviour
     {
         if (Score.playerScore >= 50 && !wave2)
         {
+            audioSource.PlayOneShot(wave);
             lbl_wave2.gameObject.SetActive(true);
             StartCoroutine(StopTimeForTwoSeconds());
             InvokeRepeating("spawnWheelstinger", 0f, 7.5f);
@@ -74,6 +80,7 @@ public class SpawnManager : MonoBehaviour
         }
         if (Score.playerScore >= 150 && !wave3)
         {
+            audioSource.PlayOneShot(wave);
             lbl_wave3.gameObject.SetActive(true);
             StartCoroutine(StopTimeForTwoSeconds());
             InvokeRepeating("spawnBeetlebomber", 0f, 7.5f);
@@ -81,6 +88,7 @@ public class SpawnManager : MonoBehaviour
         }
         if (Score.playerScore >= 250 && !boss)
         {
+            audioSource.PlayOneShot(wave);
             lbl_boss.gameObject.SetActive(true);
             StartCoroutine(StopTimeForTwoSeconds());
             //TODO - Spawn Boss
