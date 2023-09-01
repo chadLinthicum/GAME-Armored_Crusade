@@ -10,8 +10,9 @@ public class StartScreen : MonoBehaviour
     private AudioSource menuSoundSource;
 
     public GameObject TheCreditsScreen;
-    
-    void Start() {
+
+    void Start()
+    {
         menuSoundSource = gameObject.GetComponent<AudioSource>();
     }
 
@@ -23,7 +24,8 @@ public class StartScreen : MonoBehaviour
 
     public void showCredits()
     {
-        if (TheCreditsScreen) {
+        if (TheCreditsScreen)
+        {
             TheCreditsScreen.SetActive(true);
             menuSoundSource.PlayOneShot(forwardSound);
         }
@@ -31,7 +33,8 @@ public class StartScreen : MonoBehaviour
 
     public void hideCredits()
     {
-        if (TheCreditsScreen) {
+        if (TheCreditsScreen)
+        {
             TheCreditsScreen.SetActive(false);
             menuSoundSource.PlayOneShot(backwardSound);
         }
