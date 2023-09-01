@@ -75,10 +75,12 @@ public class PlayerController : MonoBehaviour
         // Player input
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(transform.right * horizontalInput * Time.deltaTime * speed);
-        tankRollingSound.pitch = 0.7f+Mathf.Abs(horizontalInput)*0.35f;
 
         verticalInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
+
+        tankRollingSound.pitch = 0.7f+Mathf.Abs(horizontalInput)*0.25f+Mathf.Abs(verticalInput)*0.4f;
+
         updateGUI();
     }
 }
