@@ -5,7 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - DestroyMe
+<<<<<<< HEAD
+=======
   - Mechoid
+>>>>>>> 0ebba89f23040ab6b6b3d1e8b52ffe6d6b5ac84e
   - Enemy_Projectile
   - Health
   - Wheelstinger
@@ -16,6 +19,12 @@ TagManager:
   - Rock
   - Shield
   - Forcefield
+<<<<<<< HEAD
+  - Mechoid_2
+  - Mechoid_1
+  - Mechoid
+=======
+>>>>>>> 0ebba89f23040ab6b6b3d1e8b52ffe6d6b5ac84e
   layers:
   - Default
   - TransparentFX
