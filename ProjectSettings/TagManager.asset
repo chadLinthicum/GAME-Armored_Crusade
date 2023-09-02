@@ -15,6 +15,7 @@ TagManager:
   - Beetlebomber
   - Rock
   - Shield
+  - Forcefield
   layers:
   - Default
   - TransparentFX
