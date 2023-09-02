@@ -20,7 +20,11 @@ public class MissileCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collisionInfo)
     {
+<<<<<<< HEAD
         if (collisionInfo.gameObject.CompareTag("Mechoid_1"))
+=======
+        if (collisionInfo.gameObject.CompareTag("Mechoid"))
+>>>>>>> 0ebba89f23040ab6b6b3d1e8b52ffe6d6b5ac84e
         {
             audioSource.PlayOneShot(explosionEnemy);
             Score.playerScore = Score.playerScore + 50;
@@ -33,7 +37,11 @@ public class MissileCollision : MonoBehaviour
         if (collisionInfo.gameObject.CompareTag("Wheelstinger"))
         {
             audioSource.PlayOneShot(explosionEnemy);
+<<<<<<< HEAD
             Score.playerScore = Score.playerScore + 100;
+=======
+            Score.playerScore = Score.playerScore + 50;
+>>>>>>> 0ebba89f23040ab6b6b3d1e8b52ffe6d6b5ac84e
             Vector3 newPosition = collisionInfo.gameObject.transform.position;
             Instantiate(explosionPrefab_Wheelstinger, newPosition, Quaternion.identity);
             Destroy(collisionInfo.transform.gameObject);
@@ -41,11 +49,16 @@ public class MissileCollision : MonoBehaviour
         if (collisionInfo.gameObject.CompareTag("Beetlebomber"))
         {
             audioSource.PlayOneShot(explosionEnemy);
+<<<<<<< HEAD
             Score.playerScore = Score.playerScore + 150;
+=======
+            Score.playerScore = Score.playerScore + 200;
+>>>>>>> 0ebba89f23040ab6b6b3d1e8b52ffe6d6b5ac84e
             Vector3 newPosition = collisionInfo.gameObject.transform.position;
             Instantiate(explosionPrefab_Beetlebomber, newPosition, Quaternion.identity);
             Destroy(collisionInfo.transform.gameObject);
         }
+<<<<<<< HEAD
         if (collisionInfo.gameObject.CompareTag("Mechoid_2"))
         {
             audioSource.PlayOneShot(explosionEnemy);
@@ -56,6 +69,8 @@ public class MissileCollision : MonoBehaviour
             Instantiate(explosionPrefab_Mechoid, newPosition, Quaternion.identity);
             Destroy(collisionInfo.transform.parent.gameObject);
         }
+=======
+>>>>>>> 0ebba89f23040ab6b6b3d1e8b52ffe6d6b5ac84e
         if (collisionInfo.gameObject.layer == LayerMask.NameToLayer("Generic"))
         {
             //not working for some reason
