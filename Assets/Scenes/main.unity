@@ -8017,7 +8017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &758609739
 GameObject:
   m_ObjectHideFlags: 0
@@ -17027,7 +17027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab_Wheelstinger: {fileID: 1953017572017508349, guid: aec96a76e62a16041a4f2eadcb2e4e78, type: 3}
-  explosionPrefab_Generic: {fileID: 1953017572017508349, guid: 376ff39d750e0ef44b01503268ef4498, type: 3}
+  explosionPrefab_Generic: {fileID: 1953017572017508349, guid: 444086b755e000a459ef6a88fb38bb25, type: 3}
 --- !u!1 &1700635514
 GameObject:
   m_ObjectHideFlags: 0

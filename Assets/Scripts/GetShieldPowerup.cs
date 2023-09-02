@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GetShield : MonoBehaviour
+public class GetShieldPowerup : MonoBehaviour
 {
     public AudioSource audioSource;
     public AudioClip sfx_forcefield;
@@ -18,9 +18,7 @@ public class GetShield : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 newPos = transform.position;
-        newPos.x++;
-        transform.position = newPos;
+        transform.position += Vector3.right * 100 * Time.deltaTime;
         transform.Rotate(Vector3.down, rotationSpeed * Time.deltaTime);
         if (transform.position.x >= 400)
         {
@@ -43,5 +41,7 @@ public class GetShield : MonoBehaviour
             Destroy(collisionInfo.gameObject);
         }
     }
+
+
 
 }

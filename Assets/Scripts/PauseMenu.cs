@@ -10,7 +10,8 @@ public class PauseMenu : MonoBehaviour
     private AudioSource menuSoundSource;
     private bool isMuted;
 
-    void Start() {
+    void Start()
+    {
         menuSoundSource = gameObject.GetComponent<AudioSource>();
     }
 
@@ -18,9 +19,12 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
         {
-            if(pauseMenu.activeSelf) {
+            if (pauseMenu.activeSelf)
+            {
                 Resume();
-            } else {
+            }
+            else
+            {
                 Pause();
             }
         }
@@ -56,7 +60,8 @@ public class PauseMenu : MonoBehaviour
     {
         isMuted = !isMuted;
         AudioListener.volume = isMuted ? 0f : 1f;
-        if(isMuted==false) {
+        if (isMuted == false)
+        {
             menuSoundSource.PlayOneShot(forwardSound);
         }
     }
