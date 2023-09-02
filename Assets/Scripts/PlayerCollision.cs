@@ -27,7 +27,6 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collisionInfo.collider.CompareTag("Rock"))
         {
-            Debug.Log("EXIT");
             PlayerController.speed = 30f;
         }
     }

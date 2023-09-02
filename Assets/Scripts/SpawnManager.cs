@@ -85,7 +85,7 @@ public class SpawnManager : MonoBehaviour
             audioSource.PlayOneShot(wave);
             lbl_wave2.gameObject.SetActive(true);
             StartCoroutine(StopTimeForTwoSeconds());
-            InvokeRepeating("spawnWheelstinger", 0f, 3f);
+            InvokeRepeating("spawnWheelstinger", 0f, 4f);
             wave2 = !wave2;
 
         }
