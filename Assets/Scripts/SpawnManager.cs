@@ -51,7 +51,6 @@ public class SpawnManager : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
 
-        InvokeRepeating("spawnShieldPowerup", 0f, 2f);
         InvokeRepeating("spawnMechoid_1", 0f, 2f);
 
         lbl_wave2.gameObject.SetActive(false);
@@ -97,6 +96,7 @@ public class SpawnManager : MonoBehaviour
         }
         if (Score.playerScore >= 150 && !wave3)
         {
+            InvokeRepeating("spawnShieldPowerup", 0f, 30f);
             audioSource.PlayOneShot(wave);
             lbl_wave3.gameObject.SetActive(true);
             StartCoroutine(StopTimeForTwoSeconds());
