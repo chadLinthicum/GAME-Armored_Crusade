@@ -14,6 +14,7 @@ TagManager:
   - Missile
   - Beetlebomber
   - Rock
+  - Shield
   layers:
   - Default
   - TransparentFX
