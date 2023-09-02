@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Shield : MonoBehaviour
 {
-
-    public GameObject forcefield;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +27,9 @@ public class Shield : MonoBehaviour
         if (collisionInfo.gameObject.CompareTag("Missile"))
         {
             Debug.Log("Missile");
-
+            GameObject forcefield = GameObject.Find("Forcefield");
+            Vector3 targetPosition = new Vector3(-3f, -17f, -12f);
+            forcefield.transform.localPosition = targetPosition;
         }
     }
 
