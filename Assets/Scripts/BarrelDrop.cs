@@ -23,7 +23,7 @@ public class BarrelDrop : MonoBehaviour
         if (transform.position.z <= (playerPosZ + 225))
         {
             rigidbody.useGravity = true;
-            rigidbody.AddForce(Vector3.down * 20f);
+            rigidbody.AddForce(Vector3.down * 50f);
         }
     }
 }
