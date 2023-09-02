@@ -34,12 +34,20 @@ public class GetShieldPowerup : MonoBehaviour
             Vector3 targetPosition = new Vector3(-3f, -17f, -12f);
             forcefield.transform.localPosition = targetPosition;
             audioSource.PlayOneShot(sfx_forcefield);
+            Vector3 originalPos = transform.position;
             Vector3 newPos = transform.position;
             newPos.x = -5000;
             newPos.y = -5000;
             transform.position = newPos;
             Destroy(collisionInfo.gameObject);
+            StartCoroutine(ResetForcefieldPosition(forcefield, originalPos));
         }
+    }
+
+    private IEnumerator ResetForcefieldPosition(GameObject forcefield, Vector3 originalPos)
+    {
+        yield return new WaitForSeconds(10f);
+        forcefield.transform.localPosition = originalPos;
     }
 
 
