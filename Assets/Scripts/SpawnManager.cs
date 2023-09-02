@@ -13,6 +13,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] wheelstingerPrefab;
     public GameObject[] beetlebomberPrefab;
     public GameObject[] rockPrefab;
+    public GameObject[] shieldPowerupPrefab;
 
     public float mechoidSpawnY = 92.5f;
     public float wheelstingerSpawnY = 18f;
@@ -24,6 +25,7 @@ public class SpawnManager : MonoBehaviour
     private Vector3[] wheelstingerPositions;
     private Vector3[] beetlebomberPositions;
     private Vector3[] rockPositions;
+    private Vector3[] shieldPowerupPositions;
 
     public static bool wave2 = false;
     public static bool wave3 = false;
@@ -49,6 +51,7 @@ public class SpawnManager : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
 
+        //InvokeRepeating("spawnShieldPowerup", 0f, 2f);
         InvokeRepeating("spawnMechoid_1", 0f, 2f);
 
         lbl_wave2.gameObject.SetActive(false);
@@ -74,6 +77,9 @@ public class SpawnManager : MonoBehaviour
             new Vector3(-50f,rockSpawnY, spawnZ),
             new Vector3(-21f,rockSpawnY, spawnZ),
             new Vector3(18f, rockSpawnY, spawnZ)
+        };
+        shieldPowerupPositions = new Vector3[] {
+            new Vector3(-300f, 75, 150),
         };
     }
 
@@ -150,6 +156,12 @@ public class SpawnManager : MonoBehaviour
         int rockIndex = Random.Range(0, rockPositions.Length);
         Vector3 randomPosition = rockPositions[rockIndex];
         Instantiate(rockPrefab[0], randomPosition, rockPrefab[0].transform.rotation);
+    }
+    void spawnShieldPowerup()
+    {
+        int shieldPowerupIndex = Random.Range(0, shieldPowerupPositions.Length);
+        Vector3 randomPosition = shieldPowerupPositions[shieldPowerupIndex];
+        Instantiate(shieldPowerupPrefab[0], randomPosition, shieldPowerupPrefab[0].transform.rotation);
     }
 
     private IEnumerator StopTimeForTwoSeconds()
