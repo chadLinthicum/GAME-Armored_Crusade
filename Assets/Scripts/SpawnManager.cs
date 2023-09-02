@@ -38,7 +38,7 @@ public class SpawnManager : MonoBehaviour
         if (debug != true)
         {
             lbl_ready.gameObject.SetActive(true);
-            StartCoroutine(StopTimeForFiveSeconds());
+            StartCoroutine(StopTimeForThreeSeconds());
         }
 
         audioSource = GetComponent<AudioSource>();
@@ -127,10 +127,10 @@ public class SpawnManager : MonoBehaviour
         lbl_wave3.gameObject.SetActive(false);
         lbl_boss.gameObject.SetActive(false);
     }
-    private IEnumerator StopTimeForFiveSeconds()
+    private IEnumerator StopTimeForThreeSeconds()
     {
         Time.timeScale = 0f;
-        yield return new WaitForSecondsRealtime(5f);
+        yield return new WaitForSecondsRealtime(3f);
         Time.timeScale = 1f;
         lbl_ready.gameObject.SetActive(false);
     }
