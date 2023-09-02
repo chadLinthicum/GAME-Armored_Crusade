@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
     public float verticalInput;
-    public float speed = 30.0f;
+    public static float speed = 30.0f;
     public float xRangeLeft = 44.0f;
     public float xRangeRight = 22.0f;
     public float zRangeBottom = -17.0f;

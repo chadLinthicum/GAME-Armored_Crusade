@@ -12,15 +12,18 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] mechoidPrefab_2;
     public GameObject[] wheelstingerPrefab;
     public GameObject[] beetlebomberPrefab;
+    public GameObject[] rockPrefab;
 
     public float mechoidSpawnY = 92.5f;
     public float wheelstingerSpawnY = 18f;
+    public float rockSpawnY = 18f;
     public float beetlebomberSpawnY = 70f;
     public float spawnZ = 1100f;
 
-    public Vector3[] mechoidPositions;
-    public Vector3[] wheelstingerPositions;
-    public Vector3[] beetlebomberPositions;
+    private Vector3[] mechoidPositions;
+    private Vector3[] wheelstingerPositions;
+    private Vector3[] beetlebomberPositions;
+    private Vector3[] rockPositions;
 
     public static bool wave2 = false;
     public static bool wave3 = false;
@@ -47,7 +50,6 @@ public class SpawnManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
         InvokeRepeating("spawnMechoid_1", 0f, 2f);
-        //InvokeRepeating("spawnMechoid_2", 0f, 6f);
 
         lbl_wave2.gameObject.SetActive(false);
         lbl_wave3.gameObject.SetActive(false);
@@ -67,6 +69,11 @@ public class SpawnManager : MonoBehaviour
             new Vector3(-46.75f, beetlebomberSpawnY, spawnZ),
             new Vector3(-23f, beetlebomberSpawnY, spawnZ),
             new Vector3(12f, beetlebomberSpawnY, spawnZ)
+        };
+        rockPositions = new Vector3[] {
+            new Vector3(-50f,rockSpawnY, spawnZ),
+            new Vector3(-21f,rockSpawnY, spawnZ),
+            new Vector3(18f, rockSpawnY, spawnZ)
         };
     }
 
@@ -88,6 +95,7 @@ public class SpawnManager : MonoBehaviour
             lbl_wave3.gameObject.SetActive(true);
             StartCoroutine(StopTimeForTwoSeconds());
             InvokeRepeating("spawnBeetlebomber", 0f, 4f);
+            InvokeRepeating("spawnRock", 0f, 40f);
             wave3 = !wave3;
         }
         if (Score.playerScore >= 200 && !wave4)
@@ -96,6 +104,8 @@ public class SpawnManager : MonoBehaviour
             lbl_wave4.gameObject.SetActive(true);
             StartCoroutine(StopTimeForTwoSeconds());
             InvokeRepeating("spawnMechoid_2", 0f, 3f);
+            CancelInvoke("spawnRock");
+            InvokeRepeating("spawnRock", 0f, 20f);
             wave4 = !wave4;
         }
         //if (Score.playerScore >= 250 && !boss)
@@ -134,6 +144,12 @@ public class SpawnManager : MonoBehaviour
         int beetlebomberIndex = Random.Range(0, beetlebomberPositions.Length);
         Vector3 randomPosition = beetlebomberPositions[beetlebomberIndex];
         Instantiate(beetlebomberPrefab[0], randomPosition, beetlebomberPrefab[0].transform.rotation);
+    }
+    void spawnRock()
+    {
+        int rockIndex = Random.Range(0, rockPositions.Length);
+        Vector3 randomPosition = rockPositions[rockIndex];
+        Instantiate(rockPrefab[0], randomPosition, rockPrefab[0].transform.rotation);
     }
 
     private IEnumerator StopTimeForTwoSeconds()

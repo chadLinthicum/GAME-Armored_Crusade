@@ -410,7 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac064757676da6241ac4f8f0f3afca72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debug: 0
+  debug: 1
   mechoidPrefab_1:
   - {fileID: 4446997030073595637, guid: 7db03678da15e5c4ea001ce7cf80c278, type: 3}
   mechoidPrefab_2:
@@ -419,13 +419,13 @@ MonoBehaviour:
   - {fileID: 6068582082104294185, guid: f8940c766871d0a45ad2d9e1e808b7fd, type: 3}
   beetlebomberPrefab:
   - {fileID: 7735109602230403296, guid: 9deda1c45ad53a24d8f1100a5da48df2, type: 3}
+  rockPrefab:
+  - {fileID: 3620830312387391289, guid: 9878448e4f82ff34c8e9c037f1c6cc95, type: 3}
   mechoidSpawnY: 92.5
   wheelstingerSpawnY: 21
+  rockSpawnY: 18
   beetlebomberSpawnY: 70
   spawnZ: 1100
-  mechoidPositions: []
-  wheelstingerPositions: []
-  beetlebomberPositions: []
   lbl_boss: {fileID: 714259639}
   lbl_ready: {fileID: 1350723570}
   lbl_wave2: {fileID: 758609740}
@@ -16507,6 +16507,67 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1001 &1594081102
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1968541519680691355, guid: 9878448e4f82ff34c8e9c037f1c6cc95, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968541519680691355, guid: 9878448e4f82ff34c8e9c037f1c6cc95, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 17.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968541519680691355, guid: 9878448e4f82ff34c8e9c037f1c6cc95, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 256.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968541519680691355, guid: 9878448e4f82ff34c8e9c037f1c6cc95, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968541519680691355, guid: 9878448e4f82ff34c8e9c037f1c6cc95, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968541519680691355, guid: 9878448e4f82ff34c8e9c037f1c6cc95, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968541519680691355, guid: 9878448e4f82ff34c8e9c037f1c6cc95, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968541519680691355, guid: 9878448e4f82ff34c8e9c037f1c6cc95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968541519680691355, guid: 9878448e4f82ff34c8e9c037f1c6cc95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968541519680691355, guid: 9878448e4f82ff34c8e9c037f1c6cc95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620830312387391289, guid: 9878448e4f82ff34c8e9c037f1c6cc95, type: 3}
+      propertyPath: m_Name
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620830312387391289, guid: 9878448e4f82ff34c8e9c037f1c6cc95, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9878448e4f82ff34c8e9c037f1c6cc95, type: 3}
 --- !u!1 &1621533582
 GameObject:
   m_ObjectHideFlags: 0
@@ -22067,7 +22128,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInput: 0
   verticalInput: 0
-  speed: 25
   xRangeLeft: 44
   xRangeRight: 22
   zRangeBottom: -17
@@ -23907,3 +23967,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 1903191719}
   - {fileID: 502100277}
+  - {fileID: 1594081102}

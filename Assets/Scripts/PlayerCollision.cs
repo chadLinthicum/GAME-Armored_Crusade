@@ -13,10 +13,22 @@ public class PlayerCollision : MonoBehaviour
             Destroy(collisionInfo.gameObject);
             Instantiate(explosionPrefab_Wheelstinger, collisionInfo.gameObject.transform.position, Quaternion.identity);
         }
+        if (collisionInfo.collider.CompareTag("Rock"))
+        {
+            PlayerController.speed = 15f;
+        }
         if (collisionInfo.gameObject.layer == LayerMask.NameToLayer("Ouch"))
         {
             Destroy(collisionInfo.gameObject);
             Instantiate(explosionPrefab_Generic, collisionInfo.gameObject.transform.position, Quaternion.identity);
+        }
+    }
+    private void OnCollisionExit(Collision collisionInfo)
+    {
+        if (collisionInfo.collider.CompareTag("Rock"))
+        {
+            Debug.Log("EXIT");
+            PlayerController.speed = 30f;
         }
     }
 }
