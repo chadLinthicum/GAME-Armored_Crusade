@@ -7,7 +7,7 @@ public class BarrelDrop : MonoBehaviour
 
     private GameObject player;
     public float playerPosZ;
-    private Rigidbody rigidbody;
+    private new Rigidbody rigidbody;
     public GameObject explosionPrefab_Generic;
     // Start is called before the first frame update
     void Start()

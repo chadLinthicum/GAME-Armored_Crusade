@@ -45,7 +45,10 @@ public class MissileCollision : MonoBehaviour
             Vector3 newPosition = collisionInfo.gameObject.transform.position;
             Instantiate(explosionPrefab_Beetlebomber, newPosition, Quaternion.identity);
             Destroy(collisionInfo.transform.gameObject);
-
+        }
+        if (collisionInfo.gameObject.CompareTag("Shield"))
+        {
+            Debug.Log("SHIELD");
         }
         if (collisionInfo.gameObject.layer == LayerMask.NameToLayer("Generic"))
         {
