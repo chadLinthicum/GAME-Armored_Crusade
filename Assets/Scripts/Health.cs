@@ -8,18 +8,16 @@ public class Health : MonoBehaviour
 {
     private int health = 3;
     public TextMeshPro healthHUD;
+    public GameObject damage;
+    public GameObject explosionPrefab_Generic;
     public GameObject player;
-
     public GameObject projectile;
 
-    public GameObject explosionPrefab_Generic;
-    // Start is called before the first frame update
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -28,9 +26,8 @@ public class Health : MonoBehaviour
     {
         if (collisionInfo.gameObject.layer == LayerMask.NameToLayer("Ouch"))
         {
+            StartCoroutine("DamageOverlay");
             health--;
-            Debug.Log("Health: " + health);
-            //Full health color is (88, 161, 87, 255)
             if (health == 2)
             {
                 healthHUD.color = new Color32(204, 207, 62, 255);
@@ -48,5 +45,14 @@ public class Health : MonoBehaviour
                 SceneManager.LoadScene(2);
             }
         }
+    }
+
+    private IEnumerator DamageOverlay()
+    {
+        Time.timeScale = 0.5f;
+        damage.gameObject.SetActive(true);
+        yield return new WaitForSecondsRealtime(1f);
+        damage.gameObject.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
