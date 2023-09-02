@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Shield : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip sfx_forcefield;
     // Start is called before the first frame update
     void Start()
     {
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,6 +32,7 @@ public class Shield : MonoBehaviour
             GameObject forcefield = GameObject.Find("Forcefield");
             Vector3 targetPosition = new Vector3(-3f, -17f, -12f);
             forcefield.transform.localPosition = targetPosition;
+            audioSource.PlayOneShot(sfx_forcefield);
         }
     }
 
