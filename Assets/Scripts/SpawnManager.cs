@@ -95,8 +95,7 @@ public class SpawnManager : MonoBehaviour
             audioSource.PlayOneShot(wave);
             lbl_wave4.gameObject.SetActive(true);
             StartCoroutine(StopTimeForTwoSeconds());
-            CancelInvoke("spawnMechoid_1");
-            InvokeRepeating("spawnMechoid_1", 0f, 1.5f);
+            InvokeRepeating("spawnMechoid_2", 0f, 3f);
             wave4 = !wave4;
         }
         //if (Score.playerScore >= 250 && !boss)
