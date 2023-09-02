@@ -49,7 +49,7 @@ MonoBehaviour:
   speed: 400
   zStop: 150
   boundary: -1200
-  laser: {fileID: 6379516027143976404, guid: 102f4a6af7c057146971fb47f3b30c9d, type: 3}
+  laser: {fileID: 6379516027143976404, guid: 0ca0d3860b6626549975b1c019c72b81, type: 3}
   stinger: {fileID: 8895620611031837225}
 --- !u!82 &-7626456711221121647
 AudioSource:
