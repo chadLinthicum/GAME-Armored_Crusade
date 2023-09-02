@@ -9,8 +9,6 @@ public class MissileCollision : MonoBehaviour
     public GameObject explosionPrefab_Wheelstinger;
     public GameObject explosionPrefab_Generic;
 
-    public GameObject player;
-
     private AudioSource audioSource;
     public AudioClip explosionEnemy;
     // public AudioClip explosionGeneric;
