@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - DestroyMe
-  - Mechoid
   - Enemy_Projectile
   - Health
   - Wheelstinger
@@ -16,6 +15,9 @@ TagManager:
   - Rock
   - Shield
   - Forcefield
+  - Mechoid_2
+  - Mechoid_1
+  - Mechoid
   layers:
   - Default
   - TransparentFX
