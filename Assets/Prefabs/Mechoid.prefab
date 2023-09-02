@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c297be5a93f030e4390b88ee55902ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
+  speed: 350
   zStop: 150
   boundary: -1200
   laser: {fileID: 7390973323096283027, guid: 723415823c7d2014188466592033cef0, type: 3}
