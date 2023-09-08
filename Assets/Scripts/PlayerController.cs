@@ -22,8 +22,10 @@ public class PlayerController : MonoBehaviour
 
     // data shown on the GUI
     private int playerScore = 0;
-    private float playerTime = 0;
+    private static float playerTime = 0;
     //private float playerHealth = 60;
+
+    public static string datTime;
 
     // Start is called before the first frame update
     void Start()
@@ -31,11 +33,17 @@ public class PlayerController : MonoBehaviour
         tankRollingSound = gameObject.GetComponent<AudioSource>();
     }
 
+    public static void ResetTime()
+    {
+        playerTime = 0;
+    }
+
     string formatTime(float timeInSeconds)
     {
         int timeInSecondsInt = (int)timeInSeconds;
         int minutes = (int)(timeInSeconds / 60f);
         int seconds = timeInSecondsInt - (minutes * 60);
+        datTime = minutes.ToString("D2") + ":" + seconds.ToString("D2");
         return minutes.ToString("D2") + ":" + seconds.ToString("D2");
     }
 

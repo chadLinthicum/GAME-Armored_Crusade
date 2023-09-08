@@ -85,7 +85,12 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Score.playerScore >= 50 && !wave2)
+        if(Input.GetKeyDown(KeyCode.J))
+        {
+            Score.playerScore = Score.playerScore + 501;
+        }
+
+        if (Score.playerScore >= 300 && !wave2)
         {
             audioSource.PlayOneShot(wave);
             lbl_wave2.gameObject.SetActive(true);
@@ -94,7 +99,7 @@ public class SpawnManager : MonoBehaviour
             wave2 = !wave2;
 
         }
-        if (Score.playerScore >= 150 && !wave3)
+        if (Score.playerScore >= 1000 && !wave3)
         {
             InvokeRepeating("spawnShieldPowerup", 0f, 30f);
             audioSource.PlayOneShot(wave);
@@ -104,7 +109,7 @@ public class SpawnManager : MonoBehaviour
             InvokeRepeating("spawnRock", 0f, 40f);
             wave3 = !wave3;
         }
-        if (Score.playerScore >= 200 && !wave4)
+        if (Score.playerScore >= 2000 && !wave4)
         {
             audioSource.PlayOneShot(wave);
             lbl_wave4.gameObject.SetActive(true);
