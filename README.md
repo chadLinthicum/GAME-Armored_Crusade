@@ -3,4 +3,4 @@ In the distant future, the galaxy faces a grave threat from invasive drones that
 
 Inspired by the TOMYTRONIC game, Sky Attack.
 
-Play it in your browser: metalvain.itch.io/armored-crusade
+Play it in your browser: https://metalvain.itch.io/armored-crusade
