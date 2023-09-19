@@ -1,2 +1,6 @@
 # Armored Crusade
-"Armored Crusade" is a 3D Unity game where players control a tank on rails, shooting down drones from the sky. With its unique rail system and intense battles, it offers a thrilling experience for players.
+Play it in your browser: https://metalvain.itch.io/armored-crusade
+
+In the distant future, the galaxy faces a grave threat from invasive drones that are wreaking havoc on planets, leaving destruction in their wake. These drones are controlled from a mysterious off-world planet, where a malevolent force seeks to conquer the entire galaxy. In response to this peril, a courageous group known as the Armored Crusade emerges to defend the galaxy and restore peace!
+
+Inspired by the TOMYTRONIC game, Sky Attack.
