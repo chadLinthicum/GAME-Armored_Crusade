@@ -24,7 +24,7 @@ public class StartScreen : MonoBehaviour
 
     private void Update()
     {
-        if (highScoreText) highScoreText.text = " SCORE\n<mspace=.75em>" + highScore.ToString("000000");
+        if (highScoreText) highScoreText.text = "HIGH SCORE\n<mspace=.75em>" + highScore.ToString("000000");
     }
 
     public void LoadScene(int sceneID)

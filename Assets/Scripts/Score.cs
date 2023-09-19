@@ -16,7 +16,7 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (scoreText) scoreText.text = " SCORE\n<mspace=.75em>" + playerScore.ToString("000000");
+        if (scoreText) scoreText.text = "HIGH SCORE\n<mspace=.75em>" + playerScore.ToString("000000");
     }
 
 
